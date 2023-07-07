@@ -32,7 +32,10 @@ const config: GatsbyConfig = {
     {
       resolve: `gatsby-plugin-google-fonts`,
       options: {
-        fonts: [`Roboto`, `Amatic+SC:wght@700`],
+        fonts: [
+          `Montserrat:ital,wght@0,400;0,600;1,400;1,600`,
+          `Amatic+SC:wght@700`,
+        ],
         display: "fallback",
       },
     },
