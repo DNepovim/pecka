@@ -38,7 +38,10 @@ export const DesktopNavigation: React.FC<{
   const fallbackedActiveItem = activeItem ?? items[0].link;
 
   useEffect(() => {
-    const activeNavItem = document.querySelector(
+    if (!navListRef.current) {
+      return;
+    }
+    const activeNavItem = navListRef.current.querySelector(
       `a[href$='${fallbackedActiveItem}']`
     );
     setActiveItemCor(getUnderlineCor(navListRef.current, activeNavItem));

@@ -3,6 +3,7 @@ import useScrollPosition from "@react-hook/window-scroll";
 import { DesktopNavigation } from "./DesktopNavigation";
 import { MobileNavigation } from "./MobileNavigation";
 import { Link } from "gatsby";
+import { StaticImage } from "gatsby-plugin-image";
 
 export interface NavigationItem {
   title: string;
@@ -10,9 +11,8 @@ export interface NavigationItem {
 }
 
 export const Navigation: React.FC<{
-  title?: string;
   items: NavigationItem[];
-}> = ({ title, items }) => {
+}> = ({ items }) => {
   const [activeItem, setActiveItem] = useState<string | undefined>();
   const scrollPosition = useScrollPosition();
   const onScrollHandler = useCallback(
@@ -21,7 +21,7 @@ export const Navigation: React.FC<{
         document.body.scrollHeight - (scrollPosition + window.innerHeight) <
         100
       ) {
-        setActiveItem(items[items.length - 2].link);
+        setActiveItem(items[items.length - 1].link);
         return;
       }
       setActiveItem(
@@ -44,15 +44,13 @@ export const Navigation: React.FC<{
     <div className="fixed z-20 top-0 inset-x-0 w-full bg-white py-2">
       <nav className="flex items-center w-full max-w-container md:px-4 px-2 mx-auto">
         <div className="flex items-center h-full my-0 mr-auto ml-0">
-          {title && (
-            <Link
-              className="flex m-0 text-4xl transition-opacity duration-500"
-              to="#uvod"
-              style={{ opacity: activeItem ? 1 : 0 }}
-            >
-              {title}
-            </Link>
-          )}
+          <Link
+            className="flex m-0 text-4xl transition-opacity duration-500"
+            to="#uvod"
+            style={{ opacity: activeItem ? 1 : 0 }}
+          >
+            <StaticImage src="../../images/broskev.svg" alt="" height={25} />
+          </Link>
         </div>
         <div className="ml-auto">
           <span className="max-lg:hidden">
