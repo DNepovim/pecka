@@ -38,7 +38,7 @@ export const Pillars: React.FC = () => (
           Je dobré poznávat sám sebe a znát své talenty, skrze které mohu
           naplnit svůj život. A stejně tak je dobré vědět, kdy na něco nestačím
           sám a říci si o pomoc. Je dobré, že jsme v tom spolu a na Pecce si
-          můžeme vzájemně poradit, kudy na to.
+          můžeme vzájemně poradit kudy na to.
         </P>
         <P>
           SPOILER ALERT: Hospodin tě přijímá se všemi tvými nedokonalostmi
@@ -64,13 +64,13 @@ export const Pillars: React.FC = () => (
         </P>
         <Q>
           Jenže někdy tápeme a ona jistota se nezdá být tak jistá: „Co to
-          vlastně znamená věřit? Žít život s bohem? Být křesťan? A jak do toho
+          vlastně znamená věřit? Žít život s Bohem? Být křesťan? A jak do toho
           zapadají pochybnosti či neúspěchy? Má to cenu?“
         </Q>
         <P>
-          Věříme, že má. Věříme, že se boha vyplatí do svého života zvát
+          Věříme, že má. Věříme, že se Boha vyplatí do svého života zvát
           a nevzdávat to. A k tomu bychom vás na Pecce chtěli povzbudit.
-          K hledání vlastního vztahu s bohem. K hledání formy spirituality,
+          K hledání vlastního vztahu s Bohem. K hledání formy spirituality,
           která vám bude dávat smysl. Věříme, že víra je cesta, po které se
           vyplatí jít.
           <br />
@@ -97,13 +97,13 @@ export const Pillars: React.FC = () => (
           třeba proto, aby se mládežníci vůbec měli kde potkat.
         </P>
         <P>
-          Na Pecce proto bude prostor i pro řešení zcela základních věcí jako je
-          struktura církve a místo SOMů v ní, tvorba akcí (her, pobožností)
+          Na Pecce proto bude prostor i pro řešení zcela základních věcí, jako
+          je struktura církve a místo SOMů v ní, tvorba akcí (her, pobožností)
           a jejich propagace, práce v týmu (vedení porad, role v týmu) nebo
           sdílení důležitých kontaktů „kam se obrátit, když“. Budeme si klást
-          otázku, co je vlastně naším úkolem jakožto SOMáka nebo jaká jsou naše
+          otázku, co je vlastně naším úkolem jakožto SOMáků nebo jaká jsou naše
           práva a povinnosti. Pokud máte nějaký tips and tricks, vezměte je
-          sebou, ať se máme navzájem čím osvěžit (teda zlejt, teda zalejt)!
+          s sebou, ať se máme navzájem čím osvěžit (teda zlejt, teda zalejt)!
         </P>
       </div>
     </div>

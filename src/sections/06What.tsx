@@ -26,7 +26,7 @@ export const What: React.FC = () => (
         v církvi. Moc se těšíme na společné modlitby a bohoslužby.
         <br />
         Naším velkým přáním je, aby z peckových víkendovek odjížděl každý
-        s načerpáním nové energie a silným zážitkem.
+        s novou energií a silným zážitkem.
       </P>
     </div>
     <div className="opacity-40 absolute -bottom-4 left-0 right-0">
