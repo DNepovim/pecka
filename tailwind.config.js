@@ -32,9 +32,11 @@ module.exports = {
         blue: {
           first: "#08c4be",
           second: "#052f32",
+          thirdt: "#0074BC"
         },
         beige: { first: "#f6f6e9" },
         red: { first: "#ff0000" },
+        clay: {first: "#C8968A"}
       },
     },
   },

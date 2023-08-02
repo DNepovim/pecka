@@ -5,7 +5,7 @@ import { Section } from "../components/Section";
 export const Intro: React.FC = () => (
   <Section
     id="uvod"
-    className="grid lg:grid-cols-2 min-h-[calc(100vh-8rem)] items-center box-border"
+    className="grid lg:grid-cols-2 min-h-[calc(100vh-10rem)] items-center box-border"
     bg="bg-yellow-first"
   >
     <div className="text-center z-10 relative">
@@ -24,6 +24,8 @@ export const Intro: React.FC = () => (
         className="max-lg:opacity-40 max-lg:absolute max-lg:left-1/2 max-lg:-translate-x-1/2 max-lg:top-1/2 max-lg:-translate-y-1/2"
         width={650}
         height={500}
+        sizes="50vw, (min-width: 40rem) calc((100vw - 2rem) / 2),(min-width: 60rem) calc((1200px - 2rem) / 2)"
+        breakpoints={[1120, 960, 560, 480, 400, 350, 300, 250, 200, 150]}
       />
     </div>
   </Section>

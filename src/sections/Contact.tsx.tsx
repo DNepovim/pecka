@@ -1,5 +1,6 @@
 import { StaticImage } from "gatsby-plugin-image";
 import React from "react";
+import { Link } from "../components/Link";
 import { Section } from "../components/Section";
 
 export const Contact: React.FC = () => (
@@ -22,5 +23,6 @@ export const Contact: React.FC = () => (
     <div className="opacity-50 absolute bottom-0 right-0">
       <StaticImage src="../images/cores.png" alt="" width={600} height={300} />
     </div>
+    <p className="absolute bottom-2 right-2 text-beige-first text-xs text-opacity-60">Web vypěstoval <Link to="mailto:dominik@semcr.cz">Dominik</Link></p>
   </Section>
 );

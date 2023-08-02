@@ -2,7 +2,7 @@ import React, { ReactNode } from "react";
 import { H2 } from "./Typography";
 
 export const Section: React.FC<{
-  id: string;
+  id?: string;
   children: ReactNode;
   className?: string;
   title?: string;

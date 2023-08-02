@@ -4,13 +4,14 @@ import { Section } from "../components/Section";
 import { StaticImage } from "gatsby-plugin-image";
 import { Navigation } from "../components/Navigation/Navigation";
 import { H2 } from "../components/Typography";
-import { Intro } from "../sections/01Intro";
-import { Pillars } from "../sections/02Pillars";
-import { Informations } from "../sections/03Informations";
-import { Why } from "../sections/04Why";
-import { Team } from "../sections/05Team";
-import { What } from "../sections/06What";
-import { Contact } from "../sections/07Contact.tsx";
+import { Intro } from "../sections/Intro";
+import { Pillars } from "../sections/Pillars";
+import { Informations } from "../sections/Informations";
+import { Why } from "../sections/Why";
+import { Team } from "../sections/Team";
+import { What } from "../sections/What";
+import { Contact } from "../sections/Contact.tsx";
+import { Credit } from "../sections/Credit";
 
 const IndexPage: React.FC<PageProps> = () => {
   return (
@@ -28,6 +29,7 @@ const IndexPage: React.FC<PageProps> = () => {
       />
       <main className="pt-10">
         <Intro />
+        <Credit />
         <Pillars />
         <Informations />
         <Why />
