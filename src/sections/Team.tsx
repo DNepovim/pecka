@@ -29,9 +29,8 @@ export const Team: React.FC = () => (
     </div>
     <div className="overflow-hidden">
       <StaticImage
-        src="../images/tym.webp"
+        src="../images/tym.jpeg"
         alt="Tým"
-        className="-rotate-45"
         height={500}
       />
     </div>
