@@ -23,7 +23,7 @@ export const Team: React.FC = () => (
         jak práci s mládeží rozvíjet.
       </P>
       <Q>
-        Dominik Bláha, Zuzana Férová, Roman Mazur, Damaris Kopecká, Adéla
+        Dominik Bláha, Zuzana Potočková, Roman Mazur, Damaris Kopecká, Adéla
         Bednaříková, Petra Náhlovská a Ondřej Sabela.
       </Q>
     </div>
