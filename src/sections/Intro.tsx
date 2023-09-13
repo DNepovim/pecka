@@ -30,9 +30,9 @@ export const Intro: React.FC = () => (
         />
       </Button>
       <p className="text-xs">
-        Nejse si jistí, jeli kurz pro vás?
+        Nejste si jistí, jeli kurz pro vás?
         <br />
-        Koukněte do aktulaizovaných{" "}
+        Koukněte do aktualizovaných{" "}
         <Link
           className="text-orange-first underline hover:no-underline"
           to="/#prakticke-informace"
