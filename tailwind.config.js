@@ -32,11 +32,46 @@ module.exports = {
         blue: {
           first: "#08c4be",
           second: "#052f32",
-          thirdt: "#0074BC"
+          thirdt: "#0074BC",
         },
         beige: { first: "#f6f6e9" },
         red: { first: "#ff0000" },
-        clay: {first: "#C8968A"}
+        clay: { first: "#C8968A" },
+        brown: { first: "#7b492e" },
+      },
+      keyframes: {
+        swing: {
+          "0%": {
+            transform: "rotate(0deg)",
+          },
+          "10%": {
+            transform: "rotate(-5deg)",
+          },
+          "20%": {
+            transform: "rotate(10deg)",
+          },
+          "30%": {
+            transform: "rotate(-10deg)",
+          },
+          "40%": {
+            transform: "rotate(10deg)",
+          },
+          "50%": {
+            transform: "rotate(-10deg)",
+          },
+          "60%": {
+            transform: "rotate(10deg)",
+          },
+          "70%": {
+            transform: "rotate(-5deg)",
+          },
+          "80%": {
+            transform: "rotate(0deg)",
+          },
+        },
+      },
+      animation: {
+        swing: "swing 1s ease-in-out",
       },
     },
   },

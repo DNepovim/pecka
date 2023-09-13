@@ -1,5 +1,6 @@
 import { StaticImage } from "gatsby-plugin-image";
 import React from "react";
+import { Button } from "../components/Button";
 import { Link } from "../components/Link";
 import { Section } from "../components/Section";
 
@@ -14,8 +15,20 @@ export const Intro: React.FC = () => (
       <h1 className="font-head text-[45vw] md:text-[14em] font-bold text-orange-first leading-none tracking-[.08em]">
         Pecka
       </h1>
-      <p className="bg-yellow-second px-2 py-1 inline-block rounded-md font-semibold">
-        Přihlašování vypukne 15.&thinsp;9.&thinsp;2023
+      <p className="px-2 py-1 inline-block bg-yellow-second rounded-md font-semibold">
+        Přihlašujte se do 15.&thinsp;10.&thinsp;2023
+      </p>
+      <Button
+        to="https://akce.e-cirkev.cz/pecka-kurz-pro-pracovniky-s-mladezi-v-cce"
+        className="group"
+      >
+        Chci se přihlásit
+        <StaticImage
+          alt=""
+          src="../images/hand.svg"
+          className="group-hover:animate-swing origin-bottom"
+        />
+      </Button>
       <p className="text-xs">
         Nejse si jistí, jeli kurz pro vás?
         <br />

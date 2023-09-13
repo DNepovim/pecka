@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" id="Icons" style="enable-background:new 0 0 32 32"
+	version="1.1" viewBox="0 0 32 32">
+	<style>
+		.st0 {
+			fill: none;
+			stroke: #f2dd80;
+			stroke-width: 2;
+			stroke-linecap: round;
+			stroke-linejoin: round;
+			stroke-miterlimit: 10
+		}
+	</style>
+	<path d="m3 25 2.6-4.2c1.5-2.3 4-3.8 6.8-3.8H19v0c0 2.2-1.8 4-4 4h-2" class="st0" />
+	<path
+		d="M16 21h7l1.2-1.6c1.1-1.5 2.9-2.4 4.8-2.4h0l-2.7 4.8c-1.4 2.6-4.2 4.2-7.1 4.2h0c-4.7 0-9.3 1.4-13.2 4h0M18 10h0c0-3.9 3.1-7 7-7h0v0c0 3.9-3.1 7-7 7zM18 13h0c-3.9 0-7-3.1-7-7v0h0c3.9 0 7 3.1 7 7h0zM18 2v15"
+		class="st0" />
+</svg>
