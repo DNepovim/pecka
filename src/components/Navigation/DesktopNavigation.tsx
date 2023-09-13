@@ -50,19 +50,17 @@ export const DesktopNavigation: React.FC<{
   return (
     <ul className="flex -mx-2 align-center relative" ref={navListRef}>
       {items.map((item) => (
-        <>
-          <li key={item.link}>
-            <Link
-              className={`block px-2 text-md transition-colors hover:text-orange-first ${
-                activeItem === item.link ? "text-orange-first" : ""
-              }`}
-              to={item.link}
-              key={item.link}
-            >
-              {item.title}
-            </Link>
-          </li>
-        </>
+        <li key={item.link}>
+          <Link
+            className={`block px-2 text-md transition-colors hover:text-orange-first ${
+              activeItem === item.link ? "text-orange-first" : ""
+            }`}
+            to={item.link}
+            key={item.link}
+          >
+            {item.title}
+          </Link>
+        </li>
       ))}
       {activeItemCor && (
         <div

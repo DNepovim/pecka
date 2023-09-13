@@ -26,7 +26,7 @@ export const Navigation: React.FC<{
       }
       setActiveItem(
         items.slice(0, -1).reduce<string | undefined>((acc, item) => {
-          const block = document.getElementById(item.link.substring(1));
+          const block = document.getElementById(item.link.substring(2));
           if (!block) {
             return;
           }
