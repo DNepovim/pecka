@@ -13,21 +13,21 @@ import { What } from "../sections/What";
 import { Contact } from "../sections/Contact.tsx";
 import { Credit } from "../sections/Credit";
 
+export const navItems = [
+  { title: "Úvod", link: "/#uvod" },
+  { title: "Pilíře", link: "/#pilire" },
+  { title: "Praktické informace", link: "/#prakticke-informace" },
+  { title: "Proč Pecka?", link: "/#proc-pecka" },
+  { title: "Tým", link: "/#tym" },
+  { title: "Jaké to bude?", link: "/#jake-to-bude" },
+  { title: "Kontakt", link: "/#kontakt" },
+];
+
 const IndexPage: React.FC<PageProps> = () => {
   return (
     <>
-      <Navigation
-        items={[
-          { title: "Úvod", link: "#uvod" },
-          { title: "Pilíře", link: "#pilire" },
-          { title: "Praktické informace", link: "#prakticke-informace" },
-          { title: "Proč Pecka?", link: "#proc-pecka" },
-          { title: "Tým", link: "#tym" },
-          { title: "Jaké to bude?", link: "#jake-to-bude" },
-          { title: "Kontakt", link: "#kontakt" },
-        ]}
-      />
-      <main className="pt-10">
+      <Navigation items={navItems} />
+      <main className="pt-10 bg-yellow-first">
         <Intro />
         <Credit />
         <Pillars />
