@@ -31,3 +31,7 @@ export const Q: React.FC<{ children: React.ReactNode }> = ({ children }) => (
 export const C: React.FC<{ children: React.ReactNode }> = ({ children }) => (
   <cite className="text-right block">{children}</cite>
 );
+
+export const S: React.FC<{ children: React.ReactNode }> = ({ children }) => (
+  <strong className="font-bold">{children}</strong>
+);

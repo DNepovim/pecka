@@ -1,5 +1,6 @@
 import { StaticImage } from "gatsby-plugin-image";
 import React from "react";
+import { Link } from "../components/Link";
 import { Section } from "../components/Section";
 
 export const Intro: React.FC = () => (
@@ -8,13 +9,24 @@ export const Intro: React.FC = () => (
     className="grid lg:grid-cols-2 min-h-[calc(100vh-10rem)] items-center box-border"
     bg="bg-yellow-first"
   >
-    <div className="text-center z-10 relative">
-      <p className="text-xl">Kurz pro pracovníky s mládeží v ČCE</p>
+    <div className="text-center z-10 relative flex flex-col gap-4 items-center">
+      <p className="text-xl">Kurz pro začínající pracovníky s mládeží v ČCE</p>
       <h1 className="font-head text-[45vw] md:text-[14em] font-bold text-orange-first leading-none tracking-[.08em]">
         Pecka
       </h1>
       <p className="bg-yellow-second px-2 py-1 inline-block rounded-md font-semibold">
         Přihlašování vypukne 15.&thinsp;9.&thinsp;2023
+      <p className="text-xs">
+        Nejse si jistí, jeli kurz pro vás?
+        <br />
+        Koukněte do aktulaizovaných{" "}
+        <Link
+          className="text-orange-first underline hover:no-underline"
+          to="/#prakticke-informace"
+        >
+          praktických informací
+        </Link>
+        .
       </p>
     </div>
     <div>
