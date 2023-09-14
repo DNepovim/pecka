@@ -24,9 +24,9 @@ export const Informations: React.FC = () => (
       <P>
         16.–19.&thinsp;11.&thinsp;2023 – Poděbrady
         <br />
-        2.–4.&thinsp;2.&thinsp;2024
+        2.–4.&thinsp;2.&thinsp;2024 – pravděpodobně Praha
         <br />
-        7.–9.&thinsp;6.&thinsp;2024
+        7.–9.&thinsp;6.&thinsp;2024 – Kuřim
       </P>
       <H4>Pro koho</H4>
       <P>
@@ -34,7 +34,7 @@ export const Informations: React.FC = () => (
         Nezáleží, zda jsi v SOMu, vedeš sborovou mládež nebo třeba připravuješ
         tábory pro mládež.
         <br />
-        Cílíme spíš na mladší lidí (do 25 let). Staršími a zkušenějšími lidmi
+        Cílíme spíš na mladší lidi (do 25 let). Staršími a zkušenějšími lidmi
         budeme doplňovat skupinu, pokud nebude dostatek zájemců. Přihlásit se
         tedy má smysl.
         <br />
@@ -47,6 +47,7 @@ export const Informations: React.FC = () => (
         </Link>
         ), který se na přípravě kurzu podílí a dokáže říct, bude-li vám
         přínosem.
+        <br />
       </P>
       <H4>Cena</H4>
       <P>
@@ -70,11 +71,10 @@ export const Informations: React.FC = () => (
           zde
         </Link>
         .<br />
-        Kapacita je omezená a však na pořadí nezáleží. V případě většího počtu
-        zájemcu upřednostníme mladší a méně zkušené zájemce, na které kurz
-        primárně cílí. Zároveň se budeme snažit sestavit co nejpestřejší
-        skupinu. Informace o tvém přijetí ti přijde nejpozději{" "}
-        <S>20.&thinsp;10.&thinsp;2023</S>.
+        Kapacita je omezená. V případě většího počtu zájemcu upřednostníme
+        mladší a méně zkušené zájemce, na které kurz primárně cílí. Zároveň se
+        budeme snažit sestavit co nejpestřejší skupinu. Informace o tvém přijetí
+        ti přijde nejpozději <S>20.&thinsp;10.&thinsp;2023</S>.
       </P>
     </div>
   </Section>
