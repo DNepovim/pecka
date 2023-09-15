@@ -66,7 +66,7 @@ export const Informations: React.FC = () => (
         Přihlašovat se můžete do <S>15.&nbsp;10.&nbsp;2023</S>{" "}
         <Link
           className="underline hover:no-underline text-yellow-second"
-          to="https://akce.e-cirkev.cz/pecka-kurz-pro-pracovniky-s-mladezi-v-cce"
+          to="https://akce.e-cirkev.cz/pecka-kurz-pro-zacinajici-pracovniky-s-mladezi-v-cce"
         >
           zde
         </Link>
