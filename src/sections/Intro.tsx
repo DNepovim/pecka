@@ -19,7 +19,7 @@ export const Intro: React.FC = () => (
         Přihlašujte se do 15.&thinsp;10.&thinsp;2023
       </p>
       <Button
-        to="https://akce.e-cirkev.cz/pecka-kurz-pro-pracovniky-s-mladezi-v-cce"
+        to="https://akce.e-cirkev.cz/pecka-kurz-pro-zacinajici-pracovniky-s-mladezi-v-cce"
         className="group"
       >
         Chci se přihlásit
