@@ -16,30 +16,7 @@ export const Intro: React.FC = () => (
         Pecka
       </h1>
       <p className="px-2 py-1 inline-block bg-yellow-second rounded-md font-semibold">
-        Přihlašujte se do 15.&thinsp;10.&thinsp;2023
-      </p>
-      <Button
-        to="https://akce.e-cirkev.cz/pecka-kurz-pro-zacinajici-pracovniky-s-mladezi-v-cce"
-        className="group"
-      >
-        Chci se přihlásit
-        <StaticImage
-          alt=""
-          src="../images/hand.svg"
-          className="group-hover:animate-swing origin-bottom"
-        />
-      </Button>
-      <p className="text-xs">
-        Nejste si jistí, jeli kurz pro vás?
-        <br />
-        Koukněte do aktualizovaných{" "}
-        <Link
-          className="text-orange-first underline hover:no-underline"
-          to="/#prakticke-informace"
-        >
-          praktických informací
-        </Link>
-        .
+        Přihlašování na tento ročník již bylo ukončeno.
       </p>
     </div>
     <div>

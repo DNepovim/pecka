@@ -63,14 +63,8 @@ export const Informations: React.FC = () => (
       </P>
       <H4>Přihlašování</H4>
       <P>
-        Přihlašovat se můžete do <S>15.&nbsp;10.&nbsp;2023</S>{" "}
-        <Link
-          className="underline hover:no-underline text-yellow-second"
-          to="https://akce.e-cirkev.cz/pecka-kurz-pro-zacinajici-pracovniky-s-mladezi-v-cce"
-        >
-          zde
-        </Link>
-        .<br />
+        Přihlašování na tento ročník již bylo ukončeno.
+        <br />
         Kapacita je omezená. V případě většího počtu zájemcu upřednostníme
         mladší a méně zkušené zájemce, na které kurz primárně cílí. Zároveň se
         budeme snažit sestavit co nejpestřejší skupinu. Informace o tvém přijetí
