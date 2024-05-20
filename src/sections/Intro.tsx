@@ -18,10 +18,10 @@ export const Intro: React.FC = () => (
       <p className="px-2 py-1 inline-block bg-yellow-second rounded-md font-semibold">
         Další ročník plánujeme na léto roku 2025
       </p>
-      <p className="px-2 py-1 inline-block">
-        Informace vypustíme na <a href="https://www.sjezd24.cz/" target="_blank">Sjezdu mládeže</a> v&nbsp;říjnu. <br />
+      <p className="px-2 py-1 inline-block font-italic text-xs">
+        Informace vypustíme na <a className="text-orange-first" href="https://www.sjezd24.cz/" target="_blank">Sjezdu mládeže</a> v&nbsp;říjnu. <br />
         Přihlašování spusíme na Poradě mládeže v&nbsp;březnu.<br />
-        Sleduj <a href="https://mladez.evangnet.cz/" target="_blank">web</a> nebo <a href="https://www.facebook.com/evangelickamladez" target="_blank">facebook</a> evangelické mládeže.
+        Sleduj <a className="text-orange-first" href="https://mladez.evangnet.cz/" target="_blank">web</a> nebo <a className="text-orange-first" href="https://www.facebook.com/evangelickamladez" target="_blank">facebook</a> evangelické mládeže.
       </p>
 
 
