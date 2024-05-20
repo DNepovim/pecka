@@ -25,10 +25,6 @@ const NotFoundPage: React.FC<PageProps> = () => {
               <Link className="underline text-orange-first" to="/">
                 úvodní stránku
               </Link>
-              , nebo se na kurz Pecka rovnou{" "}
-              <Link className="underline text-orange-first" to="/prihlasovani">
-                přihlaš
-              </Link>
               .
             </p>
           </div>
