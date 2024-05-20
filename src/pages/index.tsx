@@ -16,7 +16,6 @@ import { Credit } from "../sections/Credit";
 export const navItems = [
   { title: "Úvod", link: "/#uvod" },
   { title: "Pilíře", link: "/#pilire" },
-  { title: "Praktické informace", link: "/#prakticke-informace" },
   { title: "Proč Pecka?", link: "/#proc-pecka" },
   { title: "Tým", link: "/#tym" },
   { title: "Jaké to bude?", link: "/#jake-to-bude" },
@@ -31,7 +30,6 @@ const IndexPage: React.FC<PageProps> = () => {
         <Intro />
         <Credit />
         <Pillars />
-        <Informations />
         <Why />
         <Team />
         <What />
