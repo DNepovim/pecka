@@ -16,8 +16,15 @@ export const Intro: React.FC = () => (
         Pecka
       </h1>
       <p className="px-2 py-1 inline-block bg-yellow-second rounded-md font-semibold">
-        Přihlašování na tento ročník již bylo ukončeno.
+        Další ročník plánujeme na léto roku 2025
       </p>
+      <p className="px-2 py-1 inline-block">
+        Informace vypustíme na <a href="https://www.sjezd24.cz/" target="_blank">Sjezdu mládeže</a> v&nbsp;říjnu. <br />
+        Přihlašování spusíme na Poradě mládeže v&nbsp;březnu.<br />
+        Sleduj <a href="https://mladez.evangnet.cz/" target="_blank">web</a> nebo <a href="https://www.facebook.com/evangelickamladez" target="_blank">facebook</a> evangelické mládeže.
+      </p>
+
+
     </div>
     <div>
       <StaticImage
