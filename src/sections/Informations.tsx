@@ -9,7 +9,7 @@ export const Informations: React.FC = () => (
     id="prakticke-informace"
     title="Praktické informace"
     titleColor="text-beige-first"
-    bg="bg-orange-first"
+    bg="bg-brand-first"
     className="grid lg:grid-cols-[1fr,2fr] gap-8"
   >
     <StaticImage

@@ -26,7 +26,7 @@ const IndexPage: React.FC<PageProps> = () => {
   return (
     <>
       <Navigation items={navItems} />
-      <main className="pt-10 bg-yellow-first">
+      <main className="pt-10 bg-brand-second">
         <Intro />
         <Credit />
         <Pillars />

@@ -10,19 +10,19 @@ const NotFoundPage: React.FC<PageProps> = () => {
   return (
     <>
       <Navigation items={navItems} />
-      <main className="pt-10 bg-yellow-first min-h-screen">
+      <main className="pt-10 bg-brand-second min-h-screen">
         <Section
           id="uvod"
           className="grid lg:grid-cols-2 m-0 items-center box-border min-h-[90vh]"
         >
           <div className="text-center z-10 relative">
             <p className="text-xl">Stránka nenalezena</p>
-            <h1 className="font-head text-6xl font-bold text-orange-first leading-none tracking-[.08em]">
+            <h1 className="font-head text-6xl font-bold text-brand-first leading-none tracking-[.08em]">
               Tady nic není
             </h1>
             <p className="px-2 py-1 inline-block">
               Zkus jít na{" "}
-              <Link className="underline text-orange-first" to="/">
+              <Link className="underline text-brand-first" to="/">
                 úvodní stránku
               </Link>
               .
@@ -30,8 +30,8 @@ const NotFoundPage: React.FC<PageProps> = () => {
           </div>
           <div>
             <StaticImage
-              src="../images/broskev.svg"
-              alt="Broskev"
+              src="../images/svestka.svg"
+              alt="svestka"
               className="max-lg:opacity-40 max-lg:absolute max-lg:left-1/2 max-lg:-translate-x-1/2 max-lg:top-1/2 max-lg:-translate-y-1/2"
               width={650}
               height={500}

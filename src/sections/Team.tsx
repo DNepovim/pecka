@@ -7,7 +7,7 @@ export const Team: React.FC = () => (
   <Section
     id="tym"
     title="Kdo za tím stojí?"
-    titleColor="text-orange-first"
+    titleColor="text-brand-first"
     bg="bg-beige-first"
     className="grid md:grid-cols-2 gap-8"
   >
@@ -28,11 +28,7 @@ export const Team: React.FC = () => (
       </Q>
     </div>
     <div className="overflow-hidden">
-      <StaticImage
-        src="../images/tym.jpeg"
-        alt="Tým"
-        height={500}
-      />
+      <StaticImage src="../images/tym.jpeg" alt="Tým" height={500} />
     </div>
   </Section>
 );

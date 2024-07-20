@@ -21,8 +21,10 @@ export const Contact: React.FC = () => (
       (odpoví ti Damka).
     </p>
     <div className="opacity-50 absolute bottom-0 right-0">
-      <StaticImage src="../images/cores.png" alt="" width={600} height={300} />
+      <StaticImage src="../images/pecky.png" alt="" width={600} height={300} />
     </div>
-    <p className="absolute bottom-2 right-2 text-beige-first text-xs text-opacity-60">Web vypěstoval <Link to="mailto:dominik@semcr.cz">Dominik</Link></p>
+    <p className="absolute bottom-2 right-2 text-beige-first text-xs text-opacity-60">
+      Web vypěstoval <Link to="mailto:dominik@semcr.cz">Dominik</Link>
+    </p>
   </Section>
 );

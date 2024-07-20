@@ -9,7 +9,7 @@ export const Button: React.FC<ButtonProps> = ({
   ...props
 }) => (
   <Link
-    className={`rounded-md bg-brown-first font-bold flex items-end gap-2 py-2 px-4 text-yellow-first ${className}`}
+    className={`rounded-md bg-brown-first font-bold flex items-end gap-2 py-2 px-4 text-brand-second ${className}`}
     {...props}
   >
     {children}

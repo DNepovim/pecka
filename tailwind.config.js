@@ -22,8 +22,9 @@ module.exports = {
     },
     extend: {
       colors: {
-        orange: {
-          first: "#e87330",
+        brand: {
+          first: "#62226a",
+          second: "#ddf0a3",
         },
         yellow: {
           first: "#f2dd80",

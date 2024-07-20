@@ -7,7 +7,7 @@ export const Pillars: React.FC = () => (
   <Section
     id="pilire"
     title="Na čem stavíme?"
-    titleColor="text-orange-first"
+    titleColor="text-brand-first"
     bg="bg-beige-first"
   >
     <div className="grid lg:grid-cols-[1fr,2fr] gap-8">
@@ -18,7 +18,7 @@ export const Pillars: React.FC = () => (
         className="h-44"
       />
       <div>
-        <H3 color="text-orange-first">Osobnost</H3>
+        <H3 color="text-brand-first">Osobnost</H3>
         <P>
           HÁDANKA: „Každý z nás má alespoň jeden (ale spíš víc), co to je?“
           <br />
@@ -54,7 +54,7 @@ export const Pillars: React.FC = () => (
         className="h-44"
       />
       <div>
-        <H3 color="text-orange-first">Spiritualita</H3>
+        <H3 color="text-brand-first">Spiritualita</H3>
         <P>
           Jako křesťané máme velikou kliku. Můžeme se spolehnout, že s námi
           životem kráčí Hospodin, který nás vede za ruku a v nejtěžších chvílích
@@ -88,7 +88,7 @@ export const Pillars: React.FC = () => (
         className="h-44"
       />
       <div>
-        <H3 color="text-orange-first">Dovednosti a znalosti</H3>
+        <H3 color="text-brand-first">Dovednosti a znalosti</H3>
         <Q>Žádný učený z nebe nespadl aneb teď trochu nohama na zem.</Q>
         <P>
           Jako pracovníci s mládeží potřebujeme oba předešlé pilíře, abychom

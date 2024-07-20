@@ -7,8 +7,8 @@ export const What: React.FC = () => (
   <Section
     id="jake-to-bude"
     title="Jaká Pecka bude?"
-    titleColor="text-orange-first"
-    bg="bg-yellow-first"
+    titleColor="text-brand-first"
+    bg="bg-brand-second"
     className="min-h-[30rem] relative"
   >
     <div className="relative z-10">

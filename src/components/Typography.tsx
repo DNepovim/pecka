@@ -4,7 +4,9 @@ export const H2: React.FC<{ children: React.ReactNode; color?: string }> = ({
   children,
   color,
 }) => (
-  <h2 className={`text-[3.6em] font-head text-center mb-4 font-bold ${color}`}>
+  <h2
+    className={`text-[3.6em] font-head text-center mb-4 font-bold relative z-20 ${color}`}
+  >
     {children}
   </h2>
 );

@@ -24,3 +24,8 @@ html {
     padding-left: 2rem;
   }
 }
+
+::selection {
+  background-color: #62226a;
+  color: white;
+}

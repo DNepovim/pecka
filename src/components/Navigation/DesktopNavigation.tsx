@@ -52,8 +52,8 @@ export const DesktopNavigation: React.FC<{
       {items.map((item) => (
         <li key={item.link}>
           <Link
-            className={`block px-2 text-md transition-colors hover:text-orange-first ${
-              activeItem === item.link ? "text-orange-first" : ""
+            className={`block px-2 text-md transition-colors hover:text-brand-first ${
+              activeItem === item.link ? "text-brand-first" : ""
             }`}
             to={item.link}
             key={item.link}
@@ -64,7 +64,7 @@ export const DesktopNavigation: React.FC<{
       ))}
       {activeItemCor && (
         <div
-          className="absolute -bottom-2 h-[4px] bg-orange-first transition-[width_500ms,left_500ms] rounded-sm"
+          className="absolute -bottom-2 h-[4px] bg-brand-first transition-[width_500ms,left_500ms] rounded-sm"
           style={activeItemCor}
         />
       )}
