@@ -18,34 +18,34 @@ export const Intro: React.FC = () => (
       <p className="px-2 py-1 inline-block bg-yellow-second rounded-md font-semibold">
         Další ročník plánujeme na léto roku 2025
       </p>
+      <Button to="https://docs.google.com/forms/d/e/1FAIpQLSdz9QuW5O-HNEEYGhkO2wlzYsKMLff0uFyapTvmBmO-yEq8sg/viewform?usp=sf_link">
+        Dejte mi vědět
+      </Button>
+
       <p className="px-2 py-1 inline-block font-italic text-xs">
-        Informace vypustíme na{" "}
-        <a
-          className="text-brand-first hover:underline"
-          href="https://www.sjezd24.cz/"
-          target="_blank"
-        >
-          Sjezdu mládeže
-        </a>{" "}
-        v&nbsp;říjnu. <br />
-        Přihlašování spusíme na Poradě mládeže v&nbsp;březnu.
+        Přihlašování spusíme na <strong>22.&nbsp;3.&nbsp;2025</strong> na Poradě
+        mládeže.
         <br />
         Sleduj{" "}
-        <a
-          className="text-brand-first hover:underline"
-          href="https://mladez.evangnet.cz/"
-          target="_blank"
-        >
-          web
-        </a>{" "}
+        <strong>
+          <a
+            className="text-brand-first hover:underline"
+            href="https://mladez.evangnet.cz/"
+            target="_blank"
+          >
+            web
+          </a>
+        </strong>{" "}
         nebo{" "}
-        <a
-          className="text-brand-first hover:underline"
-          href="https://www.facebook.com/evangelickamladez"
-          target="_blank"
-        >
-          facebook
-        </a>{" "}
+        <strong>
+          <a
+            className="text-brand-first hover:underline"
+            href="https://www.facebook.com/evangelickamladez"
+            target="_blank"
+          >
+            facebook
+          </a>
+        </strong>{" "}
         evangelické mládeže.
       </p>
     </div>
