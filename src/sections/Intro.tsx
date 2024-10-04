@@ -18,6 +18,7 @@ export const Intro: React.FC = () => (
       <p className="px-2 py-1 inline-block bg-yellow-second rounded-md font-semibold">
         Další ročník plánujeme na léto roku 2025
       </p>
+
       <Button to="https://docs.google.com/forms/d/e/1FAIpQLSdz9QuW5O-HNEEYGhkO2wlzYsKMLff0uFyapTvmBmO-yEq8sg/viewform?usp=sf_link">
         Dejte mi vědět
       </Button>
