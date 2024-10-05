@@ -4,12 +4,14 @@ import styled from "@emotion/styled";
 import { Carousel } from "react-responsive-carousel";
 import { useWindowSize } from "rooks";
 import { Section } from "../components/Section";
+import { H3 } from "../components/Typography";
 
 export interface TeamProps {
   members: {
-    image?: ReactElement;
+    image: ReactElement;
     name: string;
     text: string;
+    fullName: string;
   }[];
 }
 
@@ -72,9 +74,10 @@ export const Team: React.FC<TeamProps> = ({ members }) => {
         )}
         indicatorContainerPosition={indicatorPosition ?? 0}
       >
-        {members?.map(({ text, name, image }) => (
+        {members?.map(({ text, name, image, fullName }) => (
           <div className="text-left" key={name}>
             {image}
+            <H3>{fullName}</H3>
             {text}
           </div>
         ))}

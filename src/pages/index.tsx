@@ -45,6 +45,7 @@ const IndexPage: React.FC<PageProps> = () => {
               ),
               text: "Práci s dětmi a mládeží se věnuji od nepaměti v církvi i mimo ní. Šest let jsem byl v somu, osm v comu, který jsem většinu času vedl. Vedl jsem také skautský oddíl a organizoval několik skautských kurzů. V církvi mi chyběl kurz, který by nakopl lidi, kteří v ní s mládeží pracují. Tak jsem s týmem silných osobností, které vzešli z evangelické mládeže založil Pecku. Kurz, který nejen vzdělává, ale snaží se působit i na osobnost a ducha a to vše za pomoci lidského společenství kurzu.",
               name: "Dominik",
+              fullName: "Dominik Bláha",
             },
             {
               image: (
@@ -58,6 +59,7 @@ const IndexPage: React.FC<PageProps> = () => {
               ),
               text: "Jsem pastorační pracovník pro mládež (<- volitelné). Vzdělávání pro mládežníky mi leželo na srdci a vyhledával jsem ho odjakmládežnickyživa. V církvi a na Pecce mě baví spojovat a praskat sociální a myšlenkové bubliny, kombinovat prostředky, styly a formy. (bonus:) Vizuální a duchovní, technické a hudební, kolektivní a osobní, hudební a duchovní, technické a duchovní, kolektivní a vizuální… a tak.",
               name: "Ondra",
+              fullName: "Ondřej Sabela",
             },
             {
               image: (
@@ -71,6 +73,7 @@ const IndexPage: React.FC<PageProps> = () => {
               ),
               text: "Při přípravě Pecky často přemýšlím o tom, jak moc ráda bych Pecku zažila, když mi bylo 16 a začínala jsem být v SOMu. Na Pecce mám ráda hlavně prima lidi, připravování programů a spirituální chvilky. Kromě toho mám moc ráda i povídání, pití čajíčků a kávičky, procházky, kytičky a hledání krásy ve zdánlivě obyčejných věcech. Prošla jsem si SOMem, spoluorganizováním sborové mládeže a prací na Omku. Ve svém studijně-pracovním životě se motám kolem sociální práce a vzdělávání.",
               name: "Adéla",
+              fullName: "Adéla Bednaříková",
             },
             {
               image: (
@@ -84,6 +87,7 @@ const IndexPage: React.FC<PageProps> = () => {
               ),
               text: "Ahoj, jsem devátým rokem farářkou v České Lípě. Pecka při mé práci je švestičkou na dortu. Mám ráda tvořivost, poezii a nezdravou kuchyni :-). Zajímáte mě VY, tak doufám, že se na letošní pecce švestce sejdeme a zažijeme společně mnoho dobrého.",
               name: "Petra",
+              fullName: "Petra Náhlovská",
             },
             {
               image: (
@@ -97,6 +101,7 @@ const IndexPage: React.FC<PageProps> = () => {
               ),
               text: "Čau lidi, dělat různé křesťanské věci s mládeží je zábavné a užitečné. Zažil jsem to z obou stran, jako účastník i vedoucí, a zásadně mě to ovlivnilo. Tak chci na Pecce přispět k tomu, aby k tomu šikovní mládežníci měli inspiraci a podporu. Aby se to v našich sborech a kostelech hezky omlazovalo. Jinak jsem farářem v Praze – Libni, vedoucím pop-rockového mládežnického pěveckého sboru a členem vedení církve.",
               name: "Roman",
+              fullName: "Roman Mazur",
             },
             {
               image: (
@@ -110,6 +115,7 @@ const IndexPage: React.FC<PageProps> = () => {
               ),
               text: "Ahoj, jsem Damka a během svého žití v mládeži jsem vyzkoušela různé role. Nejlépe mi bylo tam, kde jsem měla prostor aktivně konat podpořená týmem usměvavých a různěrostlých lidí. Dodnes z těchto zážitků funkčního spolutvoření čerpám i v profesním životě. Jsem proto moc ráda, že se mohu podílet na kurzu, který v takové atmosféře vzniká, a navíc se snaží o to, aby z mládeže odcházelo o takovou zkušenost posilněno co nejvíce lidí. Na pecce mám taky ráda její název, tak ať roste jako z vody a my s ní!",
               name: "Damaris",
+              fullName: "Damaris Kopecká",
             },
           ]}
         />
