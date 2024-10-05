@@ -1,4 +1,5 @@
 import type { GatsbyConfig } from "gatsby";
+import path from "path";
 
 const config: GatsbyConfig = {
   siteMetadata: {
@@ -22,12 +23,16 @@ const config: GatsbyConfig = {
     },
     "gatsby-transformer-sharp",
     {
-      resolve: "gatsby-source-filesystem",
+      resolve: `gatsby-source-filesystem`,
       options: {
-        name: "images",
-        path: "./src/images/",
+        name: `images`,
+        path: path.join(
+          __dirname,
+          `src`,
+          `images`,
+          process.env.GATSBY_SITE ?? ""
+        ),
       },
-      __key: "images",
     },
     {
       resolve: `gatsby-plugin-google-fonts`,

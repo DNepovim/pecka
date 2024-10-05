@@ -1,5 +1,5 @@
 "use client";
-import React, { useEffect, useRef, useState } from "react";
+import React, { ReactElement, useEffect, useRef, useState } from "react";
 import styled from "@emotion/styled";
 import { Carousel } from "react-responsive-carousel";
 import { useWindowSize } from "rooks";
@@ -7,7 +7,7 @@ import { Section } from "../components/Section";
 
 export interface TeamProps {
   members: {
-    image: string;
+    image?: ReactElement;
     name: string;
     text: string;
   }[];
@@ -71,8 +71,11 @@ export const Team: React.FC<TeamProps> = ({ members }) => {
         )}
         indicatorContainerPosition={indicatorPosition ?? 0}
       >
-        {members?.map(({ text, name }) => (
-          <p key={name}>{text}</p>
+        {members?.map(({ text, name, image }) => (
+          <div className="text-left" key={name}>
+            {image}
+            {text}
+          </div>
         ))}
       </CarouselWrapper>
     </Section>

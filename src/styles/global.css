@@ -29,3 +29,7 @@ html {
   background-color: #62226a;
   color: white;
 }
+
+.shape-outside {
+  shape-outside: circle(50%);
+}
