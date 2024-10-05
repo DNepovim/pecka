@@ -8,9 +8,12 @@ export const Section: React.FC<{
   title?: string;
   titleColor?: string;
   bg?: string;
-}> = ({ id, className, title, titleColor, bg, children }) => (
+  full?: boolean;
+}> = ({ id, className, title, titleColor, bg, children, full }) => (
   <section id={id} className={`relative py-8 ${bg}`}>
     {title && <H2 color={titleColor}>{title}</H2>}
-    <div className={`container ${className}`}>{children}</div>
+    <div className={full ? className : `container ${className}`}>
+      {children}
+    </div>
   </section>
 );

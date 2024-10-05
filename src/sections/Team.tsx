@@ -48,6 +48,7 @@ export const Team: React.FC<TeamProps> = ({ members }) => {
       title="Kdo za tím stojí?"
       titleColor="text-blue-second"
       bg="bg-beige-first"
+      full
     >
       <CarouselWrapper
         selectedItem={selectedItem}
