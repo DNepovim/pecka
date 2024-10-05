@@ -17,8 +17,8 @@ export const navItems = [
   { title: "Úvod", link: "/#uvod" },
   { title: "Pilíře", link: "/#pilire" },
   { title: "Proč Pecka?", link: "/#proc-pecka" },
+  { title: "Jaké to bylo?", link: "/#jake-to-bylo" },
   { title: "Tým", link: "/#tym" },
-  { title: "Jaké to bude?", link: "/#jake-to-bude" },
   { title: "Kontakt", link: "/#kontakt" },
 ];
 
@@ -31,8 +31,8 @@ const IndexPage: React.FC<PageProps> = () => {
         <Credit />
         <Pillars />
         <Why />
-        <Team />
         <What />
+        <Team />
         <Contact />
       </main>
     </>

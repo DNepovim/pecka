@@ -1,7 +1,6 @@
 import { StaticImage } from "gatsby-plugin-image";
 import React from "react";
 import { Button } from "../components/Button";
-import { Link } from "../components/Link";
 import { Section } from "../components/Section";
 
 export const Intro: React.FC = () => (

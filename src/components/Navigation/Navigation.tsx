@@ -41,7 +41,7 @@ export const Navigation: React.FC<{
     onScrollHandler(scrollPosition);
   }, [onScrollHandler, scrollPosition]);
   return (
-    <div className="fixed z-20 top-0 inset-x-0 w-full bg-white py-2">
+    <div className="fixed z-[100] top-0 inset-x-0 w-full bg-white py-2">
       <nav className="flex items-center w-full max-w-container md:px-4 px-2 mx-auto">
         <div className="flex items-center h-full my-0 mr-auto ml-0">
           <Link
