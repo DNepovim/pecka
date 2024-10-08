@@ -57,7 +57,7 @@ const IndexPage: React.FC<PageProps> = () => {
                   className="rounded-full float-left mr-4 mb-4 shape-outside"
                 />
               ),
-              text: "Jsem pastorační pracovník pro mládež (<- volitelné). Vzdělávání pro mládežníky mi leželo na srdci a vyhledával jsem ho odjakmládežnickyživa. V církvi a na Pecce mě baví spojovat a praskat sociální a myšlenkové bubliny, kombinovat prostředky, styly a formy. (bonus:) Vizuální a duchovní, technické a hudební, kolektivní a osobní, hudební a duchovní, technické a duchovní, kolektivní a vizuální… a tak.",
+              text: "Jsem pastorační pracovník pro mládež. Vzdělávání pro mládežníky mi leželo na srdci a vyhledával jsem ho odjakmládežnickyživa. V církvi a na Pecce mě baví spojovat a praskat sociální a myšlenkové bubliny, kombinovat prostředky, styly a formy. Vizuální a duchovní, technické a hudební, kolektivní a osobní, hudební a duchovní, technické a duchovní, kolektivní a vizuální… a tak. A taky mám rád porady.",
               name: "Ondra",
               fullName: "Ondřej Sabela",
             },
