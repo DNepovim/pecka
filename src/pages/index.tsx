@@ -117,6 +117,20 @@ const IndexPage: React.FC<PageProps> = () => {
               name: "Damaris",
               fullName: "Damaris Kopecká",
             },
+            {
+              image: (
+                <StaticImage
+                  src="../images/matous.jpeg"
+                  alt=""
+                  width={200}
+                  height={200}
+                  className="rounded-full float-left mr-4 mb-4 shape-outside"
+                />
+              ),
+              text: "Ahoj, jsem Matouš. V životě potřebuju pracovat s lidmi, ptát se jich, rozvíjet je. Myslím, že jsem tuto potřebu mohl naplňovat v práci s mládeží a v SOMu. Během mé životní cesty jsem se mohl skrze školu a různé kurzy učit, jak vymýšlet supermegakrutopřísné hry, jak pracovat se zážitkem a jak zážitek převést do reálného života. Všechny tyhle věci zkouším při práci s lidmi zapojovat. Vnímám, že ne každý má tuto základnu a chtěl bych skrze pecku předávat tyto zkušenosti. Čekat ode mě můžete cokoli. Jen ne nudnou přednášku. Těším se na viděnou v létě!",
+              name: "Matouš",
+              fullName: "Matouš Tkadleček",
+            },
           ]}
         />
         <Contact />
