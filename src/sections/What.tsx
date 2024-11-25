@@ -46,7 +46,7 @@ export const What: React.FC = () => (
         zpráva, která podrobněji popisuje, čím byl náš čas naplněn. Odkazy na ně
         najdete níže. Jejich autory*kami jsou účastníci kurzu. Někteří z nich
         nám sem na web přispěli také recenzí na celý kurz. Budeme rádi, pokud si
-        jejich dojmy přečtete a na další ročník vyrazte s námi.
+        jejich dojmy přečtete a na další ročník vyrazíte s námi.
         <br /> Druhý švestkový ročník Pecky proběhne jako týdenní akce během
         letních prázdnin roku 2025. Těšíme se na vás!
       </p>

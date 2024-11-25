@@ -103,13 +103,12 @@ export const Pillars: React.FC = () => (
           informací. Třeba proto, aby se mládežníci vůbec měli kde potkat.
         </P>
         <P>
-          Na Pecce je proto prostor i pro řešení základních věcí, jako je:
-          struktura církve a místo SOMů v ní, tvorba akcí (her, pobožností)
-          a jejich propagace, práce v týmu (vedení porad, týmové role) nebo
-          sdílení důležitých kontaktů „kam se obrátit, když“. Klademe si otázku,
-          co je vlastně hlavním úkolem pracovníků s mládeží, nebo jaká jsou naše
-          práva a povinnosti. Pokud máte nějaký tips and tricks, vezměte je
-          s sebou, ať se máme navzájem čím osvěžit!
+          Na Pecce máme prostor i pro řešení základních věcí, jako je: struktura
+          církve a místo SOMů v ní, tvorba akcí (her, pobožností) a jejich
+          propagace, práce v týmu (vedení porad, týmové role) nebo sdílení
+          důležitých kontaktů „kam se obrátit, když“. Klademe si otázku, co je
+          vlastně hlavním úkolem pracovníků s mládeží, nebo jaká jsou naše práva
+          a povinnosti. Pokud máte nějaký tips and tricks, vezměte je s sebou!
         </P>
       </div>
     </div>

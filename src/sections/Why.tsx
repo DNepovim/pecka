@@ -21,8 +21,8 @@ export const Why: React.FC = () => (
       <P>
         No a tím se dostáváme k pointě věci… je to metafora! Každý z nás v sobě
         tuhle pecku, ze které může vyrůst strom úžasného ovoce ducha svatého,
-        má. Ně který roky plodí obzvlášť hojně, jindy některou sezónu vynechá –
-        a tak je to v pořádku.
+        má. Některé roky plodí obzvlášť hojně, jindy některou sezónu vynechá – a
+        tak je to v pořádku.
       </P>
       <P>A jak to souvisí s naším kurzem?</P>
       Aby se výhonek mohl objevit, potřebuje být pecka v úrodné zemině.
@@ -37,7 +37,7 @@ export const Why: React.FC = () => (
       Aby dorostl v úrodný strom, potřebuje paprsky světla, které mu ukáží cestu
       za sluncem.
       <li>
-        Věříme, že i Hospodin tam bývá s námi, aby naše kroky vedl ve svýchk
+        Věříme, že i Hospodin tam bývá s námi, aby naše kroky vedl ve svých
         stopách.
       </li>
       <P>Tož proto Pecka – abychom spolu povyrostli! :)</P>
