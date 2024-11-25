@@ -19,6 +19,8 @@ module.exports = {
       sm: "20rem",
       md: "40rem",
       lg: "60rem",
+      xl: "80rem",
+      "2xl": "100rem",
     },
     extend: {
       colors: {

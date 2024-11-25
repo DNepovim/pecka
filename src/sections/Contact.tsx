@@ -18,7 +18,7 @@ export const Contact: React.FC = () => (
       <a className="text-blue-first" href="mailto:budeto@kurzpecka.cz">
         budeto@kurzpecka.cz
       </a>{" "}
-      (odpoví ti Damka).
+      (odpoví vám Damka).
     </p>
     <div className="opacity-50 absolute bottom-0 right-0">
       <StaticImage src="../images/pecky.png" alt="" width={600} height={300} />

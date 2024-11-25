@@ -10,6 +10,12 @@ export const Pillars: React.FC = () => (
     titleColor="text-brand-first"
     bg="bg-beige-first"
   >
+    <div className="text-center mb-16">
+      <Q>
+        Duch, osobnost, dovednosti. To jsou tři pilíře, na kterých jsme se
+        rozhodli Pecku postavit. Proč?
+      </Q>
+    </div>
     <div className="grid lg:grid-cols-[1fr,2fr] gap-8">
       <StaticImage
         src="../images/personality.webp"
@@ -35,13 +41,13 @@ export const Pillars: React.FC = () => (
           <C>Zpráva Synodní rady (1. zasedání 36. synodu ČCE)</C>
         </Q>
         <P>
-          Je dobré poznávat sám sebe a znát své talenty, skrze které mohu
-          naplnit svůj život. A stejně tak je dobré vědět, kdy na něco nestačím
-          sám a říci si o pomoc. Je dobré, že jsme v tom spolu a na Pecce si
+          Je dobré poznávat sám sebe a své talenty, skrze které můžeme naplnit
+          svůj život. A stejně tak je dobré vědět, kdy na něco sami nestačíme
+          a&nbsp;potřebujeme pomoc. Je dobré, že jsme v tom spolu a na Pecce si
           můžeme vzájemně poradit kudy na to.
         </P>
         <P>
-          SPOILER ALERT: Hospodin tě přijímá se všemi tvými nedokonalostmi
+          SPOILER ALERT: Hospodin nás přijímá se všemi našimi nedokonalostmi
           a chybami. Tak neboj.
         </P>
       </div>
@@ -93,17 +99,17 @@ export const Pillars: React.FC = () => (
         <P>
           Jako pracovníci s mládeží potřebujeme oba předešlé pilíře, abychom
           mohli inspirovat další a měli pro svou práci dostatek sil. Stejně tak
-          však mnohdy potřebujeme jen hafo praktických dovedností či informací
-          třeba proto, aby se mládežníci vůbec měli kde potkat.
+          však mnohdy potřebujeme prostě jen hafo praktických dovedností či
+          informací. Třeba proto, aby se mládežníci vůbec měli kde potkat.
         </P>
         <P>
-          Na Pecce proto bude prostor i pro řešení zcela základních věcí, jako
-          je struktura církve a místo SOMů v ní, tvorba akcí (her, pobožností)
-          a jejich propagace, práce v týmu (vedení porad, role v týmu) nebo
-          sdílení důležitých kontaktů „kam se obrátit, když“. Budeme si klást
-          otázku, co je vlastně naším úkolem jakožto SOMáků nebo jaká jsou naše
+          Na Pecce je proto prostor i pro řešení základních věcí, jako je:
+          struktura církve a místo SOMů v ní, tvorba akcí (her, pobožností)
+          a jejich propagace, práce v týmu (vedení porad, týmové role) nebo
+          sdílení důležitých kontaktů „kam se obrátit, když“. Klademe si otázku,
+          co je vlastně hlavním úkolem pracovníků s mládeží, nebo jaká jsou naše
           práva a povinnosti. Pokud máte nějaký tips and tricks, vezměte je
-          s sebou, ať se máme navzájem čím osvěžit (teda zlejt, teda zalejt)!
+          s sebou, ať se máme navzájem čím osvěžit!
         </P>
       </div>
     </div>

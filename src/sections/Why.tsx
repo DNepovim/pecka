@@ -11,47 +11,45 @@ export const Why: React.FC = () => (
     bg="bg-blue-second"
   >
     <div className="max-w-2xl text-beige-first z-10 relative">
+      <P>No přece proto, že každý z nás je pecka! Vysvětlíme.</P>
       <P>
-        Ptáte s proč takový název? No přece proto, že každý z nás je pecka!
-        Vysvětlíme.
+        Představte si krásný košatý strom. Vrhá stín, úkryt v něm nalézá mnoho
+        zvířat, na jaře sladce kvete a voní, mění krajinu. A když přijde léto,
+        to se teprve dějí věci. Strom začne plodit lahodné ovoce plné šťávy,
+        které má schopnost zasytit hlad a potěšit chuťové buňky. Je to boží.
       </P>
       <P>
-        Představte si krásný košatý strom. Broskvoň. Vrhá stín, úkryt v ní
-        nalézá mnoho zvířat, na jaře sladce kvete a voní, mění krajinu. A když
-        přijde léto, to se teprve dějí věci. Strom začne plodit lahodné ovoce
-        plné šťávy, které má schopnost zasytit hlad a potěšit chuťové buňky. Je
-        to boží.
+        No a tím se dostáváme k pointě věci… je to metafora! Každý z nás v sobě
+        tuhle pecku, ze které může vyrůst strom úžasného ovoce ducha svatého,
+        má. Ně který roky plodí obzvlášť hojně, jindy některou sezónu vynechá –
+        a tak je to v pořádku.
       </P>
+      <P>A jak to souvisí s naším kurzem?</P>
+      Aby se výhonek mohl objevit, potřebuje být pecka v úrodné zemině.
+      <li>
+        Takové bezpečné a podporující prostředí se na Pecce pokoušíme vytvářet.
+      </li>
+      Aby mohl dál růst, potřebuje k tomu dostatek vláhy.
+      <li>
+        Takovým odhodláním pramenícím ze studny nových poznání a setkání se vás
+        pokusíme osvěžit.
+      </li>
+      Aby dorostl v úrodný strom, potřebuje paprsky světla, které mu ukáží cestu
+      za sluncem.
+      <li>
+        Věříme, že i Hospodin tam bývá s námi, aby naše kroky vedl ve svýchk
+        stopách.
+      </li>
+      <P>Tož proto Pecka – abychom spolu povyrostli! :)</P>
+      <Q>
+        „Ovoce Božího Ducha však je láska, radost, pokoj, trpělivost, laskavost,
+        dobrota, věrnost, tichost a sebeovládání.“ (Z listu Galatským 5,22)
+      </Q>
       <P>
-        No a tím se dostáváme k pointě věci… je to metafora! Každý z nás v sobě
-        tuhle pecku, ze který může vyrůst strom úžasného ovoce ducha svatého,
-        má. Některý roky plodí obzvlášť hojně, jindy některou sezónu vynechá –
-        a tak je to v pořádku.
-      </P>
-      <P>
-        <strong>Přesto:</strong>
+        No dobře.
+        <br />A taky trochu proto, že to prostě BÝVÁ PECKA,
         <br />
-        Aby se výhonek mohl objevit, potřebuje být pecka v úrodné zemině.
-        <li>
-          Takové bezpečné a podporující prostředí se na Pecce pokusíme vytvořit.
-        </li>
-        Aby mohl dál růst, potřebuje k tomu dostatek vláhy.
-        <li>
-          Takovým odhodláním pramenícím ze studny nových poznání se vás pokusíme
-          zalít.
-        </li>
-        Aby dorostl v úrodný strom, potřebuje paprsky světla, které mu ukáží
-        cestu za sluncem.
-        <li>
-          Věříme, že i Hospodin tam bude s námi, aby naše kroky vedl ve svých
-          stopách.
-        </li>
-      </P>
-      <P>
-        Tož proto Pecka – abychom spolu povyrostli! „Ovoce Božího Ducha však je
-        láska, radost, pokoj, trpělivost, laskavost, dobrota, věrnost, tichost
-        a sebeovládání.“ (Z listu Galatským 5,22) No dobře. A taky trochu proto,
-        že to prostě BUDE PECKA, DĚCKA!
+        DĚCKA!
       </P>
     </div>
     <div className="absolute right-4 bottom-0 opacity-40">
