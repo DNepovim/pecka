@@ -1,5 +1,5 @@
 "use client";
-import React, { ReactElement, useEffect, useRef, useState } from "react";
+import React, { ReactElement } from "react";
 import { Section } from "../components/Section";
 import { Carousel } from "../components/Carousel/Carousel";
 

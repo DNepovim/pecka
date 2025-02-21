@@ -12,12 +12,15 @@ import { Team } from "../sections/Team";
 import { What } from "../sections/What";
 import { Contact } from "../sections/Contact";
 import { Credit } from "../sections/Credit";
+import { How } from "../sections/How";
 export const navItems = [
   { title: "Úvod", link: "/#uvod" },
-  { title: "Pilíře", link: "/#pilire" },
+  { title: "Kmeny", link: "/#kmeny" },
+  { title: "Obsah", link: "/#obsah" },
   { title: "Proč Pecka?", link: "/#proc-pecka" },
   { title: "Jaké to bylo?", link: "/#jake-to-bylo" },
   { title: "Tým", link: "/#tym" },
+  { title: "Informace", link: "/#prakticke-informace" },
   { title: "Kontakt", link: "/#kontakt" },
 ];
 
@@ -29,6 +32,7 @@ const IndexPage: React.FC<PageProps> = () => {
         <Intro />
         <Credit />
         <Pillars />
+        <How />
         <Why />
         <What />
         <Team
@@ -133,6 +137,7 @@ const IndexPage: React.FC<PageProps> = () => {
             },
           ]}
         />
+        <Informations />
         <Contact />
       </main>
     </>

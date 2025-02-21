@@ -22,11 +22,7 @@ export const Informations: React.FC = () => (
     <div className="text-beige-first">
       <H4>Termíny</H4>
       <P>
-        16.–19.&thinsp;11.&thinsp;2023 – Poděbrady
-        <br />
-        2.–4.&thinsp;2.&thinsp;2024 – pravděpodobně Praha
-        <br />
-        7.–9.&thinsp;6.&thinsp;2024 – Kuřim
+        3.–10.&thinsp;8.&thinsp;2025 – Bílí potok
       </P>
       <H4>Pro koho</H4>
       <P>
@@ -51,24 +47,24 @@ export const Informations: React.FC = () => (
       </P>
       <H4>Cena</H4>
       <P>
-        <S>1000,-</S> za všechny tři víkendy.
+        <S>1000,-</S>
       </P>
       <H4>Podmínky účasti</H4>
       <P>
         <ul>
           <li>Věk alepsoň 15 let v době konání kurzu.</li>
-          <li>Účast na všech třech víkendech.</li>
-          <li>Aktivní práce s mládeží v průběhu kurzu.</li>
+          <li>Účast na celé délce kurzu.</li>
+          <li>Aktivní práce s mládeží.</li>
         </ul>
       </P>
       <H4>Přihlašování</H4>
       <P>
-        Přihlašování na tento ročník již bylo ukončeno.
+        Přihlašování bude probíhat od 22. 3., 8:00 do 15. 5., 23:59  <a href="https://akce.e-cirkev.cz/pecka-2025-kurz-pro-zacinajici-pracovniky-s-mladezi-v-cce" target="_blank">zde</a>.
         <br />
         Kapacita je omezená. V případě většího počtu zájemcu upřednostníme
         mladší a méně zkušené zájemce, na které kurz primárně cílí. Zároveň se
         budeme snažit sestavit co nejpestřejší skupinu. Informace o tvém přijetí
-        ti přijde nejpozději <S>20.&thinsp;10.&thinsp;2023</S>.
+        ti přijde nejpozději <S>31.&thinsp;5.&thinsp;2025</S>.
       </P>
     </div>
   </Section>

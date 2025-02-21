@@ -22,8 +22,8 @@ export const H4: React.FC<{ children: React.ReactNode }> = ({ children }) => (
   <h4 className="font-bold">{children}</h4>
 );
 
-export const P: React.FC<{ children: React.ReactNode }> = ({ children }) => (
-  <p className="mb-4">{children}</p>
+export const P: React.FC<{ children: React.ReactNode, className?: string }> = ({ children, className }) => (
+  <p className={`mb-4 ${className ?? ""}`}>{children}</p>
 );
 
 export const Q: React.FC<{ children: React.ReactNode }> = ({ children }) => (

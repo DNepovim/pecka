@@ -20,7 +20,7 @@ export const Intro: React.FC = () => (
         </p>
 
         <p className="px-2 pb-1 inline-block font-italic text-xs">
-          Přihlašování spusíme <strong>22.&nbsp;3.&nbsp;2025</strong> na Poradě
+          Přihlašování spusíme <strong>22.&nbsp;3.&nbsp;2025 v 8:00</strong> na Poradě
           mládeže.
         </p>
       </div>

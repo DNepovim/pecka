@@ -1,4 +1,10 @@
-import React, { ReactElement, useEffect, useRef, useState } from "react";
+import React, {
+  ReactElement,
+  ReactNode,
+  useEffect,
+  useRef,
+  useState,
+} from "react";
 import { H3 } from "../Typography";
 import styled from "@emotion/styled";
 import { useWindowSize } from "rooks";
@@ -9,7 +15,7 @@ interface CarouselProps {
   items: {
     image?: ReactElement;
     name: string;
-    text: string;
+    text: ReactNode;
     fullName?: string;
   }[];
 }
@@ -178,7 +184,8 @@ interface NameProps {
   isSelected: boolean;
 }
 
-const Name = styled.strong`
+const Name = styled.button`
+  font-weight: bold;
   cursor: pointer;
   user-select: none;
   justify-self: flex-end;
