@@ -58,7 +58,7 @@ export const Pillars: React.FC = () => (
           ),
           image: (
             <StaticImage
-              src="../images/osobnost.svg"
+              src="../images/osobnost.png"
               alt="Dovednosti"
               objectFit="contain"
               width={400}
@@ -131,10 +131,11 @@ export const Pillars: React.FC = () => (
           ),
           image: (
             <StaticImage
-              src="../images/dovednosti.svg"
+              src="../images/dovednosti.png"
               alt="Dovednosti"
-              width={400}
-              height={400}
+              width={842}
+              height={791}
+              objectFit="contain"
               className="float-left mr-4 mb-4 h-48 w-48 shape-outside"
             />
           ),
