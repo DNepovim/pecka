@@ -21,7 +21,7 @@ export const Team: React.FC<TeamProps> = ({ members }) => {
       bg="bg-beige-first"
       full
     >
-      <Carousel items={members} />
+      <Carousel items={members} indicatorsVerticalPosition="top" />
     </Section>
   );
 };

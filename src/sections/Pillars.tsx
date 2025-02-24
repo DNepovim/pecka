@@ -19,6 +19,7 @@ export const Pillars: React.FC = () => (
       </Q>
     </div>
     <Carousel
+      indicatorsVerticalPosition="top"
       items={[
         {
           name: "Osobnost",

@@ -12,6 +12,7 @@ import { Carousel as CarouselLib } from "react-responsive-carousel";
 
 interface CarouselProps {
   isCenterd?: boolean;
+  indicatorsVerticalPosition?: "top" | "bottom";
   items: {
     image?: ReactElement;
     name: string;
@@ -20,7 +21,7 @@ interface CarouselProps {
   }[];
 }
 
-export const Carousel: React.FC<CarouselProps> = ({ isCenterd, items }) => {
+export const Carousel: React.FC<CarouselProps> = ({ isCenterd, indicatorsVerticalPosition, items }) => {
   const { innerWidth } = useWindowSize();
   const activeIndicatorRef = useRef<HTMLLIElement>(null);
   const [indicatorPosition, setIndicatorPosition] = useState<number | null>(
@@ -74,10 +75,11 @@ export const Carousel: React.FC<CarouselProps> = ({ isCenterd, items }) => {
       )}
       indicatorContainerPosition={indicatorPosition ?? 0}
       preventMovementUntilSwipeScrollTolerance
+      indicatorsPosition={indicatorsVerticalPosition ?? "bottom"}
     >
       {items.map(({ text, name, image, fullName }, index) => (
         <div
-          className={`${isCenterd ? "text-center" : "text-left"} select-none ${selectedItem === index ? "cursor-ew-resize" : selectedItem < index ? "cursor-e-resize" : "cursor-w-resize"}`}
+          className={`${isCenterd ? "text-center" : "text-left"} select-none ${selectedItem === index ? "cursor-ew-resize" : selectedItem < index ? "cursor-e-resize" : "cursor-w-resize"} max-md:flex max-md:flex-col max-md:items-center`}
           key={name}
         >
           {image && image}
@@ -89,13 +91,20 @@ export const Carousel: React.FC<CarouselProps> = ({ isCenterd, items }) => {
   );
 };
 
+interface CarouselWrapperProps {
+      indicatorsPosition: CarouselProps["indicatorsVerticalPosition"];
+        indicatorContainerPosition: number;
+}
+
 const CarouselWrapper = styled(CarouselLib)`
   padding: 2rem 0 1rem;
 
   .carousel {
     position: relative;
     width: 100%;
-    padding-bottom: 60px;
+    ${({
+      indicatorsPosition,
+}: CarouselWrapperProps) => `padding-${indicatorsPosition}: 80px;`}
     overflow: hidden;
 
     .slider {
@@ -111,7 +120,7 @@ const CarouselWrapper = styled(CarouselLib)`
       box-sizing: border-box;
       display: flex;
       flex-direction: column;
-      justify-content: center;
+      justify-content: flex-start;
       padding: 0 1rem;
       min-width: 100%;
       margin: 0;
@@ -122,14 +131,7 @@ const CarouselWrapper = styled(CarouselLib)`
         opacity 600ms cubic-bezier(0.1, 0.15, 0, 0.97),
         transform 600ms cubic-bezier(0.1, 0.15, 0, 0.97);
 
-      p {
-        display: flex;
-        align-items: center;
-        flex: 1;
-      }
-
       &:not(.selected) {
-        cursor: pointer;
         opacity: 0.4;
         transform: scale(0.7);
       }
@@ -137,12 +139,12 @@ const CarouselWrapper = styled(CarouselLib)`
 
     .control-dots {
       position: absolute;
-      bottom: 0;
+      ${({
+        indicatorsPosition,
+}: CarouselWrapperProps) => `${indicatorsPosition}: 0;`}
       left: ${({
         indicatorContainerPosition,
-      }: {
-        indicatorContainerPosition: number;
-      }) => indicatorContainerPosition}px;
+      }: CarouselWrapperProps) => indicatorContainerPosition}px;
       padding: 0;
       z-index: 1;
       display: flex;
