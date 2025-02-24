@@ -79,8 +79,7 @@ export const How: React.FC = () => (
           <a href="https://www.simplythestory.org/" target="_blank">
             Simply the Story
           </a>
-          . Je to postup, který vám pomůže se biblický příběh jak naučit, tak ho
-          pak dobře vyprávět, najít v něm poklady a formulovat a klást k němu
+          . Jde o postup, který vám pomůže si biblický příběh zapamatovat a také ho dobře odvyprávět., najít v něm poklady a formulovat a klást k němu
           otázky.
           <br /> <strong>Práce v týmu</strong> &#x279E; Málo kdo připravuje akce
           sám a hladce fungující tým vede nejen k lepším akcím, ale i k lepšímu
