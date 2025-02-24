@@ -21,29 +21,16 @@ export const Informations: React.FC = () => (
     />
     <div className="text-beige-first">
       <H4>Termíny</H4>
-      <P>
-        3.–10.&thinsp;8.&thinsp;2025 – Bílí potok
-      </P>
+      <P>3.–10.&thinsp;8.&thinsp;2025 – Bílý potok</P>
       <H4>Pro koho</H4>
       <P>
-        Především pro lidi, kteří jsou na startu aktivní práce s mláděží v ČCE.
-        Nezáleží, zda jsi v SOMu, vedeš sborovou mládež nebo třeba připravuješ
-        tábory pro mládež.
+        Především pro lidi, kteří jsou na startu aktivní práce s mládeží v ČCE.
+        Tedy pro SOMáky, vedoucí sborových mládeží či letních táborů, nebo pro
+        ty, kteří po podobné službě pokukují a potřebují si dodat odvahy.
         <br />
         Cílíme spíš na mladší lidi (do 25 let). Staršími a zkušenějšími lidmi
         budeme doplňovat skupinu, pokud nebude dostatek zájemců. Přihlásit se
         tedy má smysl.
-        <br />
-        Farářům doporučujeme přihlášení konzultovat s Romanem Mazurem (
-        <Link
-          className="text-yellow-second underline hover:no-underline"
-          to="mailto:mazur@e-cirkev.cz"
-        >
-          mazur@e-cirkev.cz
-        </Link>
-        ), který se na přípravě kurzu podílí a dokáže říct, bude-li vám
-        přínosem.
-        <br />
       </P>
       <H4>Cena</H4>
       <P>
@@ -54,12 +41,19 @@ export const Informations: React.FC = () => (
         <ul>
           <li>Věk alepsoň 15 let v době konání kurzu.</li>
           <li>Účast na celé délce kurzu.</li>
-          <li>Aktivní práce s mládeží.</li>
         </ul>
       </P>
       <H4>Přihlašování</H4>
       <P>
-        Přihlašování bude probíhat od 22. 3., 8:00 do 15. 5., 23:59  <a href="https://akce.e-cirkev.cz/pecka-2025-kurz-pro-zacinajici-pracovniky-s-mladezi-v-cce" target="_blank">zde</a>.
+        Přihlašování bude probíhat{" "}
+        <S>od 22.&thinsp;3. 8:00 do 15.&thinsp;5. 23:59</S>{" "}
+        <a
+          href="https://akce.e-cirkev.cz/pecka-2025-kurz-pro-zacinajici-pracovniky-s-mladezi-v-cce"
+          target="_blank"
+        >
+          zde
+        </a>
+        .
         <br />
         Kapacita je omezená. V případě většího počtu zájemcu upřednostníme
         mladší a méně zkušené zájemce, na které kurz primárně cílí. Zároveň se

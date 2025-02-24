@@ -66,10 +66,10 @@ export const How: React.FC = () => (
           <strong>Nenásilná komunikace</strong> &#x279E; Mezilidská komunikace
           je často zanešená doměnkami a předsudky. Kolika nedorozumění a
           nepochopení bychom předešli, kdybychom dokázali jasně formulovat své
-          pocity a potřeby a zároveň je dokázali chápat u druhých. Na tom právě
-          je postaven koncept Nenásilné komunikace Marshalla Rosenberga. A
-          protože komunikace je klíčovou dovedností každého, kdo pracuje s
-          lidmi, budeme se jít na Pecce věnovat celé jedno dopoledne.
+          pocity a potřeby a zároveň je dokázali chápat u druhých. Přesně na tom
+          stojí koncept Nenásilné komunikace Marshalla Rosenberga. A protože
+          komunikace je klíčovou dovedností každého, kdo pracuje s lidmi, budeme
+          se jí na Pecce věnovat celé jedno dopoledne.
           <br />
           <strong>Simply the Story</strong> &#x279E; Nedílnou součástí
           evangelických akcí je práce s biblickýcmi příběhy. Často si při
@@ -79,8 +79,9 @@ export const How: React.FC = () => (
           <a href="https://www.simplythestory.org/" target="_blank">
             Simply the Story
           </a>
-          . Je to metda, která vám pomůže naučit se a dobře vyprávět biblický
-          příběh, najít v něm poklady a formulovat a klást k němu otázky.
+          . Je to postup, který vám pomůže se biblický příběh jak naučit, tak ho
+          pak dobře vyprávět, najít v něm poklady a formulovat a klást k němu
+          otázky.
           <br /> <strong>Práce v týmu</strong> &#x279E; Málo kdo připravuje akce
           sám a hladce fungující tým vede nejen k lepším akcím, ale i k lepšímu
           pocitu z jejich příprav. Pro dobré fungování v týmu je třeba umět

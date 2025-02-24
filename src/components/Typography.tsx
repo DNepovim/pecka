@@ -27,7 +27,7 @@ export const P: React.FC<{ children: React.ReactNode, className?: string }> = ({
 );
 
 export const Q: React.FC<{ children: React.ReactNode }> = ({ children }) => (
-  <blockquote className="italic mb-4">{children}</blockquote>
+  <blockquote className="italic mb-4 pl-4">{children}</blockquote>
 );
 
 export const C: React.FC<{ children: React.ReactNode }> = ({ children }) => (

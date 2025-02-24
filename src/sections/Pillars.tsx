@@ -15,8 +15,7 @@ export const Pillars: React.FC = () => (
     <div className="text-center">
       <Q>
         Duch, osobnost, dovednosti.
-        <br /> To jsou tři kmeny stromu, který se v létě obsype švestkami.
-        Proč?
+        <br /> To jsou tři kmeny stromu, který se v létě obsype švestkami. Proč?
       </Q>
     </div>
     <Carousel
@@ -26,41 +25,44 @@ export const Pillars: React.FC = () => (
           fullName: "Osobnost",
           text: (
             <>
-              HÁDANKA: „Každý z nás má alespoň jeden (ale spíš víc), co to je?“
+              <Q>„Miluj bližního svého jako sám sebe.” (Marek 12, 31)</Q> Často,
+              když tuto část dvojího přikázání lásky čteme, slyšíme především
+              výzvu k milování druhých. Přitom jako nejvyšší konstantu srovnání
+              zde Ježíš používá vztah k sobě samému - nejdůležitější vztah,
+              který můžeme v životě rozvíjet, protože z něho vycházejí všechny
+              naše vztahy ostatní. Je proto dobré poznávat sám sebe a pěstovat
+              si citlivost k tomu, jak se cítím, protože pokud tu nejsem pro
+              sebe sama, nemůžu tu být dlouhodobě ani pro druhé.
               <br />
-              <br />
-              No přeci talent! Něco, v čem jsme opravdu dobří. Každý z nás je
-              jedinečné boží dítě. Každý z nás má své silné a slabé stránky,
-              každý z nás má své potřeby, každý z nás má své zdroje, kterými
-              může doplňovat energii. Každý z nás trochu jinak, jinde, jindy.
-              Důležité však je, že každý z nás má potenciál svůj talent rozvíjet
-              a nechávat si všemi silami pomáhat k dobrému. Každý z nás by měl
-              znát svou cenu.
+              <br /> Každý z nás je jedinečné boží dítě. Každý z nás má své
+              silné a slabé stránky, každý z nás má své potřeby, každý z nás má
+              své zdroje, kterými může doplňovat energii. Každý z nás má
+              množství talentů, skrze které může naplnit svůj život. Každý z nás
+              by měl znát svou cenu.
               <br />
               <br />
               <Q>
-                „Nikdo není tak silný, aby nepotřeboval druhé. A nikdo není tak
+                „Nikdo není tak silný, aby nepotřeboval druhé. A nikdo není tak
                 slabý, aby neměl druhým co dát.“
-                <C>Zpráva Synodní rady (1. zasedání 36. synodu ČCE)</C>
+                <C>Zpráva Synodní rady (1. zasedání 36. synodu ČCE)</C>
               </Q>
-              Je dobré poznávat sám sebe a své talenty, skrze které můžeme
-              naplnit svůj život. A stejně tak je dobré vědět, kdy na něco sami
-              nestačíme a&nbsp;potřebujeme pomoc. Je dobré, že jsme v tom spolu
-              a na Pecce si můžeme vzájemně poradit kudy na to.
+              Být k sobě laskavý, důvěřovat si, rozvíjet svá obdarování a
+              nechávat si všemi silami pomáhat k dobrému. Není to vždy snadné,
+              ale jsme v tom spolu a na Pecce si můžeme vzájemně poradit, kudy
+              na to.
               <br />
-              <br />
-              SPOILER ALERT: Hospodin nás přijímá se všemi našimi nedokonalostmi
-              a chybami. Tak neboj.
+              <br /> SPOILER ALERT: Hospodin nás přijímá se všemi našimi
+              nedokonalostmi a chybami. Tak nebojte. :)
             </>
           ),
           image: (
             <StaticImage
-              src="../images/personality.webp"
+              src="../images/osobnost.svg"
               alt="Dovednosti"
-              objectFit="cover"
-              width={200}
-              height={200}
-              className="float-left mr-4 mb-4 shape-outside"
+              objectFit="contain"
+              width={400}
+              height={400}
+              className="float-left mr-4 mb-4 h-48 w-48 shape-outside"
             />
           ),
         },
@@ -95,12 +97,12 @@ export const Pillars: React.FC = () => (
           ),
           image: (
             <StaticImage
-              src="../images/spirituality.png"
+              src="../images/spiritualita.svg"
               alt="Dovednosti"
-              objectFit="cover"
-              width={200}
-              height={200}
-              className="float-left mr-4 mb-4 shape-outside"
+              objectFit="contain"
+              width={400}
+              height={400}
+              className="float-left mr-4 mb-4 h-48 w-48 shape-outside"
             />
           ),
         },
@@ -128,12 +130,11 @@ export const Pillars: React.FC = () => (
           ),
           image: (
             <StaticImage
-              src="../images/knowledge.webp"
+              src="../images/dovednosti.svg"
               alt="Dovednosti"
-              objectFit="cover"
-              width={200}
-              height={200}
-              className="float-left mr-4 mb-4 shape-outside"
+              width={400}
+              height={400}
+              className="float-left mr-4 mb-4 h-48 w-48 shape-outside"
             />
           ),
         },
