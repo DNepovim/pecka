@@ -57,6 +57,7 @@ export const Carousel: React.FC<CarouselProps> = ({ isCenterd, items }) => {
       showArrows={false}
       showStatus={false}
       showThumbs={false}
+      infiniteLoop={(innerWidth ?? 501) < 500}
       transitionTime={600}
       emulateTouch
       renderIndicator={(onClick, isSelected, index) => (
@@ -72,10 +73,11 @@ export const Carousel: React.FC<CarouselProps> = ({ isCenterd, items }) => {
         </>
       )}
       indicatorContainerPosition={indicatorPosition ?? 0}
+      preventMovementUntilSwipeScrollTolerance
     >
-      {items.map(({ text, name, image, fullName }) => (
+      {items.map(({ text, name, image, fullName }, index) => (
         <div
-          className={`${isCenterd ? "text-center" : "text-left"} select-none`}
+          className={`${isCenterd ? "text-center" : "text-left"} select-none ${selectedItem === index ? "cursor-ew-resize" : selectedItem < index ? "cursor-e-resize" : "cursor-w-resize"}`}
           key={name}
         >
           {image && image}
