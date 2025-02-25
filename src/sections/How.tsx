@@ -64,7 +64,7 @@ export const How: React.FC = () => (
         <H3>Vzdělávací programy</H3>
         <div className="pl-8">
           <strong>Nenásilná komunikace</strong> &#x279E; Mezilidská komunikace
-          je často zanešená doměnkami a předsudky. Kolika nedorozumění a
+          je často zanešená domněnkami a předsudky. Kolika nedorozumění a
           nepochopení bychom předešli, kdybychom dokázali jasně formulovat své
           pocity a potřeby a zároveň je dokázali chápat u druhých. Přesně na tom
           stojí koncept Nenásilné komunikace Marshalla Rosenberga. A protože
