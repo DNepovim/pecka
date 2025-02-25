@@ -20,7 +20,7 @@ export const Informations: React.FC = () => (
       width={200}
     />
     <div className="text-beige-first">
-      <H4>Termíny</H4>
+      <H4>Termín a místo</H4>
       <P>3.–10.&thinsp;8.&thinsp;2025 – Bílý potok</P>
       <H4>Pro koho</H4>
       <P>

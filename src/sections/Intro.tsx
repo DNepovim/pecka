@@ -15,8 +15,8 @@ export const Intro: React.FC = () => (
         Pecka
       </h1>
       <div>
-        <p className="px-2 pt-1 inline-block bg-yellow-second rounded-md font-semibold">
-          Další ročník plánujeme na léto roku 2025
+        <p className="px-2 pt-1 mb-2 inline-block bg-yellow-second rounded-md font-semibold">
+          Další ročník proběhne 3.–10.&thinsp;8.&thinsp;2025
         </p>
 
         <p className="px-2 pb-1 inline-block font-italic text-xs">

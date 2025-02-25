@@ -113,7 +113,7 @@ export const Pillars: React.FC = () => (
           text: (
             <>
               <Q>Žádný učený z nebe nespadl aneb teď trochu nohama na zem.</Q>
-              Jako pracovníci s mládeží potřebujeme oba předešlé pilíře, abychom
+              Jako pracovníci s mládeží potřebujeme oba předešlé kmeny, abychom
               mohli inspirovat další a měli pro svou práci dostatek sil. Stejně
               tak však mnohdy potřebujeme prostě jen hafo praktických dovedností
               či informací. Třeba proto, aby se mládežníci vůbec měli kde
