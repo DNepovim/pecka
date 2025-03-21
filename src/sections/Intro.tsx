@@ -14,43 +14,16 @@ export const Intro: React.FC = () => (
       <h1 className="font-head text-[45vw] md:text-[14em] font-bold text-brand-first leading-none tracking-[.08em]">
         Pecka
       </h1>
-      <div>
-        <p className="px-2 pt-1 mb-2 inline-block bg-yellow-second rounded-md font-semibold">
-          Další ročník proběhne 3.–10.&thinsp;8.&thinsp;2025
-        </p>
+      <p className="px-2 pt-1 mb-2 inline-block bg-yellow-second rounded-md font-semibold">
+        Další ročník proběhne 3.–10. 8. 2025
+      </p>
 
-        <p className="px-2 pb-1 inline-block font-italic text-xs">
-          Přihlašování spusíme <strong>22.&nbsp;3.&nbsp;2025 v 8:00</strong> na Poradě
-          mládeže.
-        </p>
-      </div>
-
-      <Button to="https://docs.google.com/forms/d/e/1FAIpQLSdz9QuW5O-HNEEYGhkO2wlzYsKMLff0uFyapTvmBmO-yEq8sg/viewform?usp=sf_link">
-        Dejte mi vědět {">"}
+      <Button to="https://akce.e-cirkev.cz/pecka-2025-kurz-pro-zacinajici-pracovniky-s-mladezi-v-cce">
+        Přihlas se {">"}
       </Button>
 
-      <p className="px-2 py-1 inline-block font-italic text-xs">
-        Sleduj{" "}
-        <strong>
-          <a
-            className="text-brand-first hover:underline"
-            href="https://mladez.evangnet.cz/"
-            target="_blank"
-          >
-            web
-          </a>
-        </strong>{" "}
-        nebo{" "}
-        <strong>
-          <a
-            className="text-brand-first hover:underline"
-            href="https://www.facebook.com/evangelickamladez"
-            target="_blank"
-          >
-            facebook
-          </a>
-        </strong>{" "}
-        evangelické mládeže.
+      <p className="px-2 pb-1 font-italic text-xs">
+        do <strong>15. 5. 2025</strong>
       </p>
     </div>
     <div>
