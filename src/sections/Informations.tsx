@@ -48,7 +48,7 @@ export const Informations: React.FC = () => (
         Přihlašování bude probíhat{" "}
         <S>od 22.&thinsp;3. 8:00 do 15.&thinsp;5. 23:59</S>{" "}
         <a
-          href="https://akce.e-cirkev.cz/pecka-2025-kurz-pro-zacinajici-pracovniky-s-mladezi-v-cce"
+          href="https://akce.e-cirkev.cz/register/154"
           target="_blank"
         >
           zde

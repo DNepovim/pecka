@@ -18,7 +18,7 @@ export const Intro: React.FC = () => (
         Další ročník proběhne 3.–10. 8. 2025
       </p>
 
-      <Button to="https://akce.e-cirkev.cz/pecka-2025-kurz-pro-zacinajici-pracovniky-s-mladezi-v-cce">
+      <Button to="https://akce.e-cirkev.cz/register/154">
         Přihlas se {">"}
       </Button>
 
