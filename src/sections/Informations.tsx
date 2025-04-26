@@ -34,7 +34,12 @@ export const Informations: React.FC = () => (
       </P>
       <H4>Cena</H4>
       <P>
-        <S>1000,-</S>
+        <S>1000,-</S><br/>(<a
+          href="https://www.semcr.cz"
+          target="_blank"
+        >
+          SEM
+        </a> za své členy celou částku hradí)
       </P>
       <H4>Podmínky účasti</H4>
       <P>
