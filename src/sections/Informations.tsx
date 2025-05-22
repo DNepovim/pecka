@@ -50,8 +50,8 @@ export const Informations: React.FC = () => (
       </P>
       <H4>Přihlašování</H4>
       <P>
-        Přihlašování bude probíhat{" "}
-        <S>od 22.&thinsp;3. 8:00 do 15.&thinsp;5. 23:59</S>{" "}
+        Přihlašujte se{" "}
+        <S>do 31.&thinsp;5.</S>{" "}
         <a
           href="https://akce.e-cirkev.cz/register/154"
           target="_blank"
