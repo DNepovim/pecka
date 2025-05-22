@@ -23,7 +23,7 @@ export const Intro: React.FC = () => (
       </Button>
 
       <p className="px-2 pb-1 font-italic text-xs">
-        do <strong>15. 5. 2025</strong>
+        do <strong>31. 5. 2025</strong>
       </p>
     </div>
     <div>
