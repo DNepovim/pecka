@@ -63,7 +63,7 @@ export const How: React.FC = () => (
       <article className="col-span-2">
         <H3>Vzdělávací programy</H3>
         <div className="pl-8">
-          I ty pojímáme tak zážitkově, jak je to možné. Dlouhého sezení a poslouchání se dočkáte jen zřídka kdy. Krom krátkých programů, které naťuknou nějaké konkrétní téma, věnujeme těm zásadnějším oblastem celé dopoledne. Hlouběji se tak můžete ponořit například do: 
+          I ty pojímáme tak zážitkově, jak je to možné. Dlouhého sezení a poslouchání se dočkáte jen zřídka kdy. Krom krátkých programů, které naťuknou nějaké konkrétní téma, věnujeme těm zásadnějším oblastem celé dopoledne. Hlouběji se tak můžete ponořit například do:<br />
           <strong>Nenásilná komunikace</strong> &#x279E; Mezilidská komunikace
           je často zanesená domněnkami a předsudky. Kolika nedorozumění a
           nepochopení bychom předešli, kdybychom dokázali jasně formulovat své
