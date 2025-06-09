@@ -14,16 +14,11 @@ export const Intro: React.FC = () => (
       <h1 className="font-head text-[45vw] md:text-[14em] font-bold text-brand-first leading-none tracking-[.08em]">
         Pecka
       </h1>
-      <p className="px-2 pt-1 mb-2 inline-block bg-yellow-second rounded-md font-semibold">
-        Další ročník proběhne 3.–10. 8. 2025
-      </p>
-
-      <Button to="https://akce.e-cirkev.cz/register/154">
-        Přihlas se {">"}
-      </Button>
-
       <p className="px-2 pb-1 font-italic text-xs">
-        do <strong>31. 5. 2025</strong>
+        Ročník 2025 je v běhu...
+      </p>
+      <p className="px-2 pt-1 mb-2 inline-block bg-yellow-second rounded-md font-semibold">
+        Další ročník proběhne nejspíš v srpnu 2026.
       </p>
     </div>
     <div>
