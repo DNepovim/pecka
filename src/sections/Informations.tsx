@@ -50,20 +50,7 @@ export const Informations: React.FC = () => (
       </P>
       <H4>Přihlašování</H4>
       <P>
-        Přihlašujte se{" "}
-        <S>do 31.&thinsp;5.</S>{" "}
-        <a
-          href="https://akce.e-cirkev.cz/register/154"
-          target="_blank"
-        >
-          zde
-        </a>
-        .
-        <br />
-        Kapacita je omezená. V případě většího počtu zájemcu upřednostníme
-        mladší a méně zkušené zájemce, na které kurz primárně cílí. Zároveň se
-        budeme snažit sestavit co nejpestřejší skupinu. Informace o tvém přijetí
-        ti přijde nejpozději <S>31.&thinsp;5.&thinsp;2025</S>.
+        ... již bylo ukončeno.
       </P>
     </div>
   </Section>
