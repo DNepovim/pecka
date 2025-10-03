@@ -49,7 +49,7 @@ export const Navigation: React.FC<{
             to="#uvod"
             style={{ opacity: activeItem ? 1 : 0 }}
           >
-            <StaticImage src="../../images/svestka.svg" alt="" height={25} />
+            {/* <StaticImage src="../../images/svestka.svg" alt="" height={25} /> */}
           </Link>
         </div>
         <div className="ml-auto">

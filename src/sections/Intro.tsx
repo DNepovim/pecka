@@ -1,7 +1,7 @@
 import { StaticImage } from "gatsby-plugin-image";
 import React from "react";
-import { Button } from "../components/Button";
 import { Section } from "../components/Section";
+import { Button } from "../components/Button";
 
 export const Intro: React.FC = () => (
   <Section
@@ -14,23 +14,48 @@ export const Intro: React.FC = () => (
       <h1 className="font-head text-[45vw] md:text-[14em] font-bold text-brand-first leading-none tracking-[.08em]">
         Pecka
       </h1>
-      <p className="px-2 pb-1 font-italic text-xs">
-        Ročník 2025 je v běhu...
-      </p>
       <p className="px-2 pt-1 mb-2 inline-block bg-yellow-second rounded-md font-semibold">
-        Další ročník proběhne nejspíš v srpnu 2026.
+        Další ročník proběhne 26. 7.–2. 8. 2026.
       </p>
+      <p className="px-2 py-1 inline-block font-italic text-xs max-w-80">
+        Sleduj{" "}
+        <strong>
+          <a
+            className="text-brand-first hover:underline"
+            href="https://mladez.evangnet.cz/"
+            target="_blank"
+          >
+            web
+          </a>
+        </strong>{" "}
+        nebo{" "}
+        <strong>
+          <a
+            className="text-brand-first hover:underline"
+            href="https://www.facebook.com/evangelickamladez"
+            target="_blank"
+          >
+            facebook
+          </a>
+        </strong>{" "}
+        evangelické mládeže, nebo nám dej svůj e-mail a mi ti napíšeme.
+      </p>
+
+      <Button to="https://docs.google.com/forms/d/e/1FAIpQLSdz9QuW5O-HNEEYGhkO2wlzYsKMLff0uFyapTvmBmO-yEq8sg/viewform?usp=sf_link">
+        Dejte mi vědět
+      </Button>
     </div>
-    <div>
+    <div className="relative p-12 flex items-center justify-center">
       <StaticImage
-        src="../images/svestka.svg"
+        src="../images/visen.png"
         alt="svestka"
-        className="max-lg:opacity-40 max-lg:absolute max-lg:left-1/2 max-lg:-translate-x-1/2 max-lg:top-1/2 max-lg:-translate-y-1/2 select-none"
-        width={650}
-        height={500}
+        className="opacity-60 hover:opacity-100 transition-opacity rounded-md max-lg:opacity-40 max-lg:absolute max-lg:left-1/2 max-lg:-translate-x-1/2 max-lg:top-1/2 max-lg:-translate-y-1/2 select-none"
+        width={300}
+        height={300}
         sizes="50vw, (min-width: 40rem) calc((100vw - 2rem) / 2),(min-width: 60rem) calc((1200px - 2rem) / 2)"
         breakpoints={[1120, 960, 560, 480, 400, 350, 300, 250, 200, 150]}
       />
+      <p className="absolute top-1/2 left-1/2 -translate-x-1/2 font-bold text-white opacity-60 text-xl">Logo ve výrobě...</p>
     </div>
   </Section>
 );
