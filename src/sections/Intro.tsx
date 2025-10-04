@@ -10,7 +10,7 @@ export const Intro: React.FC = () => (
     bg="bg-brand-second"
   >
     <div className="text-center z-10 relative flex flex-col gap-4 items-center">
-      <p className="text-xl">Kurz pro začínající pracovníky s mládeží v ČCE</p>
+      <p className="text-xl">Kurz pro pracovníky s mládeží v ČCE</p>
       <h1 className="font-head text-[45vw] md:text-[14em] font-bold text-brand-first leading-none tracking-[.08em]">
         Pecka
       </h1>
