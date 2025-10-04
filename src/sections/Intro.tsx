@@ -14,9 +14,21 @@ export const Intro: React.FC = () => (
       <h1 className="font-head text-[45vw] md:text-[14em] font-bold text-brand-first leading-none tracking-[.08em]">
         Pecka
       </h1>
-      <p className="px-2 pt-1 mb-2 inline-block bg-yellow-second rounded-md font-semibold">
-        Další ročník proběhne 26. 7.–2. 8. 2026.
+      <p className="px-2 pt-1 mb-0 inline-block text-sm">
+        další ročník proběhne
+        <br />{" "}
+        <span className="bg-yellow-second rounded-md text-xl font-semibold">
+          26. 7. – 2. 8. 2026
+        </span><br/>
+        a přihlásit se na něj budeš moct od
+        <br />{" "}
+        <span className="rounded-md text-xl font-semibold">
+          14. 1. 2026
+        </span>
       </p>
+      <Button to="https://docs.google.com/forms/d/e/1FAIpQLSdz9QuW5O-HNEEYGhkO2wlzYsKMLff0uFyapTvmBmO-yEq8sg/viewform?usp=sf_link">
+        Dejte mi vědět
+      </Button>
       <p className="px-2 py-1 inline-block font-italic text-xs max-w-80">
         Sleduj{" "}
         <strong>
@@ -41,9 +53,6 @@ export const Intro: React.FC = () => (
         evangelické mládeže, nebo nám dej svůj e-mail a mi ti napíšeme.
       </p>
 
-      <Button to="https://docs.google.com/forms/d/e/1FAIpQLSdz9QuW5O-HNEEYGhkO2wlzYsKMLff0uFyapTvmBmO-yEq8sg/viewform?usp=sf_link">
-        Dejte mi vědět
-      </Button>
     </div>
     <div className="relative p-12 flex items-center justify-center">
       <StaticImage
@@ -55,7 +64,9 @@ export const Intro: React.FC = () => (
         sizes="50vw, (min-width: 40rem) calc((100vw - 2rem) / 2),(min-width: 60rem) calc((1200px - 2rem) / 2)"
         breakpoints={[1120, 960, 560, 480, 400, 350, 300, 250, 200, 150]}
       />
-      <p className="absolute top-1/2 left-1/2 -translate-x-1/2 font-bold text-white opacity-60 text-xl">Logo ve výrobě...</p>
+      <p className="absolute top-1/2 left-1/2 -translate-x-1/2 font-bold text-white opacity-60 text-xl">
+        Logo ve výrobě...
+      </p>
     </div>
   </Section>
 );
