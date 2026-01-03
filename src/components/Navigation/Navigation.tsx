@@ -1,8 +1,8 @@
 import React, { useCallback, useEffect, useState } from "react";
 import useScrollPosition from "@react-hook/window-scroll";
 import { DesktopNavigation } from "./DesktopNavigation";
-import { MobileNavigation } from "./MobileNavigation";
 import { Link } from "gatsby";
+import { MobileNavigation } from "./MobileNavigation";
 import { StaticImage } from "gatsby-plugin-image";
 
 export interface NavigationItem {
@@ -32,10 +32,10 @@ export const Navigation: React.FC<{
           }
           const { top } = block.getBoundingClientRect();
           return top < 100 ? item.link : acc;
-        }, undefined)
+        }, undefined),
       );
     },
-    [items, scrollPosition]
+    [items, scrollPosition],
   );
   useEffect(() => {
     onScrollHandler(scrollPosition);
@@ -49,7 +49,7 @@ export const Navigation: React.FC<{
             to="#uvod"
             style={{ opacity: activeItem ? 1 : 0 }}
           >
-            {/* <StaticImage src="../../images/svestka.svg" alt="" height={25} /> */}
+            <StaticImage src="../../images/visen.png" alt="" height={25} />
           </Link>
         </div>
         <div className="ml-auto">

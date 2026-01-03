@@ -46,7 +46,7 @@ const config: GatsbyConfig = {
     {
       resolve: "gatsby-plugin-manifest",
       options: {
-        icon: "src/images/svestka.svg",
+        icon: "src/images/visen.png",
       },
     },
   ],

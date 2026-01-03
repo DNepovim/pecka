@@ -21,7 +21,11 @@ export const Informations: React.FC = () => (
     />
     <div className="text-beige-first">
       <H4>Termín a místo</H4>
-      <P>3.–10.&thinsp;8.&thinsp;2025 – Bílý potok</P>
+      <P>
+        26. 7. – 2. 8. 2026 – chata{" "}
+        <Link to="https://drevomorka.skauting.cz">Dřevomorka</Link>{" "}
+        v&nbsp;Lužických horách.
+      </P>
       <H4>Pro koho</H4>
       <P>
         Především pro lidi, kteří jsou na startu aktivní práce s mládeží v ČCE.
@@ -34,12 +38,9 @@ export const Informations: React.FC = () => (
       </P>
       <H4>Cena</H4>
       <P>
-        <S>1000,-</S><br/>(<a
-          href="https://www.semcr.cz"
-          target="_blank"
-        >
-          SEM
-        </a> za své členy celou částku hradí)
+        <S>1000,-</S>
+        <br />(<Link to="https://www.semcr.cz">SEM</Link> za své členy celou
+        částku hradí)
       </P>
       <H4>Podmínky účasti</H4>
       <P>
@@ -49,9 +50,7 @@ export const Informations: React.FC = () => (
         </ul>
       </P>
       <H4>Přihlašování</H4>
-      <P>
-        ... již bylo ukončeno.
-      </P>
+      <P>vypukne 14. 1. 2026</P>
     </div>
   </Section>
 );

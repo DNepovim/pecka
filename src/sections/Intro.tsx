@@ -53,12 +53,12 @@ export const Intro: React.FC = () => (
       </p>
     </div>
     <StaticImage
-      src="../images/kolaz-25.png"
+      src="../images/visen.png"
       alt="svestka"
       className="max-lg:opacity-40 max-lg:absolute max-lg:left-1/2 max-lg:-translate-x-1/2 max-lg:top-1/2 max-lg:-translate-y-1/2 select-none"
       transformOptions={{ fit: "contain" }}
       width={1000}
-      height={775}
+      height={1000}
       sizes="50vw, (min-width: 40rem) calc((100vw - 2rem) / 2),(min-width: 60rem) calc((1200px - 2rem) / 2)"
       breakpoints={[1120, 960, 560, 480, 400, 350, 300, 250, 200, 150]}
     />
