@@ -23,11 +23,11 @@ export const How: React.FC = () => (
         Tady je ochutnávka toho, s čím se na Pecce setkáte:
       </Q>
     </div>
-    <div className="grid md:grid-cols-3 gap-8 items-start mt-16">
+    <div className="grid md:grid-cols-3 gap-y-8 md:gap-x-8 items-start mt-16">
       <StaticImage
         src="../images/17.jpg"
         alt="svestka"
-        className="rounded-md"
+        className="rounded-md max-md:col-span-full"
         width={500}
         height={500}
         sizes="50vw, (min-width: 40rem) calc((100vw - 2rem) / 2),(min-width: 60rem) calc((1200px - 2rem) / 2)"
@@ -51,7 +51,7 @@ export const How: React.FC = () => (
       <StaticImage
         src="../images/28.jpg"
         alt="svestka"
-        className="rounded-md"
+        className="rounded-md max-md:col-span-full"
         width={500}
         height={500}
         sizes="50vw, (min-width: 40rem) calc((100vw - 2rem) / 2),(min-width: 60rem) calc((1200px - 2rem) / 2)"
@@ -83,7 +83,7 @@ export const How: React.FC = () => (
       <StaticImage
         src="../images/32.jpg"
         alt="svestka"
-        className="rounded-md"
+        className="rounded-md max-md:col-span-full"
         width={500}
         height={500}
         sizes="50vw, (min-width: 40rem) calc((100vw - 2rem) / 2),(min-width: 60rem) calc((1200px - 2rem) / 2)"

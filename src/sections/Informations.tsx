@@ -23,7 +23,7 @@ export const Informations: React.FC = () => (
       <H4>Termín a místo</H4>
       <P>
         26. 7. – 2. 8. 2026 – chata{" "}
-        <Link to="https://drevomorka.skauting.cz">Dřevomorka</Link>{" "}
+        <Link className="underline hover:no-underline" to="https://drevomorka.skauting.cz">Dřevomorka</Link>{" "}
         v&nbsp;Lužických horách.
       </P>
       <H4>Pro koho</H4>
