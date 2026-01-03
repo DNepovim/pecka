@@ -1,6 +1,7 @@
 import React from "react";
 import { H3, P, Q } from "../components/Typography";
 import { Section } from "../components/Section";
+import { StaticImage } from "gatsby-plugin-image";
 
 export const How: React.FC = () => (
   <Section
@@ -22,8 +23,18 @@ export const How: React.FC = () => (
         Tady je ochutnávka toho, s čím se na Pecce setkáte:
       </Q>
     </div>
-    <div className="grid md:grid-cols-3 gap-4">
-      <article className="col-span-full md:col-span-2">
+    <div className="grid md:grid-cols-3 gap-8 items-start mt-16">
+      <StaticImage
+        src="../images/17.jpg"
+        alt="svestka"
+        className="rounded-md"
+        width={500}
+        height={500}
+        sizes="50vw, (min-width: 40rem) calc((100vw - 2rem) / 2),(min-width: 60rem) calc((1200px - 2rem) / 2)"
+        breakpoints={[560, 480, 400, 350, 300, 250, 200, 150]}
+      />
+
+      <article className="col-span-full md:col-start-2 md:col-span-2">
         <H3>Kultura na kurzu </H3>
         Na Pecce se snažíme vytvářet otevřené a respektující prostředí. Jako
         jednu z nejcennějších hodnot vnímáme vzájemné sdílení a podporu. Na
@@ -37,6 +48,15 @@ export const How: React.FC = () => (
         chybování, radosti a vděčnosti).
       </article>
 
+      <StaticImage
+        src="../images/28.jpg"
+        alt="svestka"
+        className="rounded-md"
+        width={500}
+        height={500}
+        sizes="50vw, (min-width: 40rem) calc((100vw - 2rem) / 2),(min-width: 60rem) calc((1200px - 2rem) / 2)"
+        breakpoints={[560, 480, 400, 350, 300, 250, 200, 150]}
+      />
       <article className="col-span-full md:col-start-2 md:col-span-2">
         <H3>Inspirativní programy</H3>
         Chceme, aby účastníci byli inspirováni přímo aktivitami, které na Pecce
@@ -60,10 +80,24 @@ export const How: React.FC = () => (
         </div>
       </article>
 
+      <StaticImage
+        src="../images/32.jpg"
+        alt="svestka"
+        className="rounded-md"
+        width={500}
+        height={500}
+        sizes="50vw, (min-width: 40rem) calc((100vw - 2rem) / 2),(min-width: 60rem) calc((1200px - 2rem) / 2)"
+        breakpoints={[560, 480, 400, 350, 300, 250, 200, 150]}
+      />
       <article className="col-span-2">
         <H3>Vzdělávací programy</H3>
         <div className="pl-8">
-          I ty pojímáme tak zážitkově, jak jen je to možné. Dlouhého sezení a poslouchání se dočkáš zřídkakdy. Dopoledne vždy patří jednomu tématu, které probereme do hloubky. Jiné programy jsou kratší, nebo kurz doplňují, takže probíhají paralelně a je na tobě, který si vybereš.  Delší programové bloky na Pecce věnujeme například:<br />
+          I ty pojímáme tak zážitkově, jak jen je to možné. Dlouhého sezení a
+          poslouchání se dočkáš zřídkakdy. Dopoledne vždy patří jednomu tématu,
+          které probereme do hloubky. Jiné programy jsou kratší, nebo kurz
+          doplňují, takže probíhají paralelně a je na tobě, který si vybereš.
+          Delší programové bloky na Pecce věnujeme například:
+          <br />
           <strong>Nenásilná komunikace</strong> &#x279E; Mezilidská komunikace
           je často zanesená domněnkami a předsudky. Kolika nedorozumění a
           nepochopení bychom předešli, kdybychom dokázali jasně formulovat své
@@ -80,7 +114,8 @@ export const How: React.FC = () => (
           <a href="https://www.simplythestory.org/" target="_blank">
             Simply the Story
           </a>
-          . Jde o postup, který vám pomůže si biblický příběh zapamatovat a také ho dobře odvyprávět, najít v něm poklady a formulovat a klást k němu
+          . Jde o postup, který vám pomůže si biblický příběh zapamatovat a také
+          ho dobře odvyprávět, najít v něm poklady a formulovat a klást k němu
           otázky.
           <br /> <strong>Práce v týmu</strong> &#x279E; Málo kdo připravuje akce
           sám a hladce fungující tým vede nejen k lepším akcím, ale i k lepšímu

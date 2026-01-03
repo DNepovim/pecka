@@ -21,7 +21,11 @@ interface CarouselProps {
   }[];
 }
 
-export const Carousel: React.FC<CarouselProps> = ({ isCenterd, indicatorsVerticalPosition, items }) => {
+export const Carousel: React.FC<CarouselProps> = ({
+  isCenterd,
+  indicatorsVerticalPosition,
+  items,
+}) => {
   const { innerWidth } = useWindowSize();
   const activeIndicatorRef = useRef<HTMLLIElement>(null);
   const [indicatorPosition, setIndicatorPosition] = useState<number | null>(
@@ -92,8 +96,8 @@ export const Carousel: React.FC<CarouselProps> = ({ isCenterd, indicatorsVertica
 };
 
 interface CarouselWrapperProps {
-      indicatorsPosition: CarouselProps["indicatorsVerticalPosition"];
-        indicatorContainerPosition: number;
+  indicatorsPosition: CarouselProps["indicatorsVerticalPosition"];
+  indicatorContainerPosition: number;
 }
 
 const CarouselWrapper = styled(CarouselLib)`
@@ -102,9 +106,8 @@ const CarouselWrapper = styled(CarouselLib)`
   .carousel {
     position: relative;
     width: 100%;
-    ${({
-      indicatorsPosition,
-}: CarouselWrapperProps) => `padding-${indicatorsPosition}: 80px;`}
+    ${({ indicatorsPosition }: CarouselWrapperProps) =>
+      `padding-${indicatorsPosition}: 80px;`}
     overflow: hidden;
 
     .slider {
@@ -139,12 +142,10 @@ const CarouselWrapper = styled(CarouselLib)`
 
     .control-dots {
       position: absolute;
-      ${({
-        indicatorsPosition,
-}: CarouselWrapperProps) => `${indicatorsPosition}: 0;`}
-      left: ${({
-        indicatorContainerPosition,
-      }: CarouselWrapperProps) => indicatorContainerPosition}px;
+      ${({ indicatorsPosition }: CarouselWrapperProps) =>
+        `${indicatorsPosition}: 0;`}
+      left: ${({ indicatorContainerPosition }: CarouselWrapperProps) =>
+        indicatorContainerPosition}px;
       padding: 0;
       z-index: 1;
       display: flex;

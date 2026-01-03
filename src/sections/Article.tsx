@@ -6,6 +6,7 @@ export interface ArticleProps {
   text: string;
   author: string;
   link: string;
+  label?: string
 }
 
 export const Article: React.FC<ArticleProps> = ({
@@ -13,9 +14,10 @@ export const Article: React.FC<ArticleProps> = ({
   text,
   author,
   link,
+  label
 }) => (
   <article>
-    <H3 color="text-brand-first">
+    <H3 className="text-brand-first">
       <a href={link} target="_blank">
         {title}
       </a>
@@ -28,7 +30,7 @@ export const Article: React.FC<ArticleProps> = ({
         target="_blank"
         className="text-brand-first hover:underline font-bold"
       >
-        Celý článek na webu mládeže{" >"}
+        {label ?? "Celý článek na webu mládeže"}{" >"}
       </a>
     </div>
   </article>

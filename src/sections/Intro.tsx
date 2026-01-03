@@ -53,6 +53,16 @@ export const Intro: React.FC = () => (
       </p>
     </div>
     <StaticImage
+      src="../images/30.HEIC"
+      alt=""
+      className="absolute inset-0 opacity-40"
+      transformOptions={{ fit: "cover" }}
+      width={2000}
+      height={2000}
+      sizes="100vw"
+      breakpoints={[2000, 1500, 1120, 960, 560, 480, 400]}
+    />
+    <StaticImage
       src="../images/visen.png"
       alt="svestka"
       className="max-lg:opacity-40 max-lg:absolute max-lg:left-1/2 max-lg:-translate-x-1/2 max-lg:top-1/2 max-lg:-translate-y-1/2 select-none"

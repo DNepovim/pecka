@@ -11,11 +11,11 @@ export const H2: React.FC<{ children: React.ReactNode; color?: string }> = ({
   </h2>
 );
 
-export const H3: React.FC<{ children: React.ReactNode; color?: string }> = ({
+export const H3: React.FC<{ children: React.ReactNode; className?: string }> = ({
   children,
-  color,
+  className,
 }) => (
-  <h3 className={`text-[2.4em] font-head font-bold ${color}`}>{children}</h3>
+  <h3 className={`text-[2.4em] font-head font-bold ${className}`}>{children}</h3>
 );
 
 export const H4: React.FC<{ children: React.ReactNode }> = ({ children }) => (
