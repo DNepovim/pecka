@@ -1,9 +1,7 @@
 import * as React from "react";
 import type { HeadFC, PageProps } from "gatsby";
-import { Section } from "../components/Section";
 import { StaticImage } from "gatsby-plugin-image";
 import { Navigation } from "../components/Navigation/Navigation";
-import { H2 } from "../components/Typography";
 import { Intro } from "../sections/Intro";
 import { Pillars } from "../sections/Pillars";
 import { Informations } from "../sections/Informations";
@@ -13,6 +11,7 @@ import { What } from "../sections/What";
 import { Contact } from "../sections/Contact";
 import { Credit } from "../sections/Credit";
 import { How } from "../sections/How";
+import { Claim } from "../sections/Claim";
 export const navItems = [
   { title: "Úvod", link: "/#uvod" },
   { title: "Kmeny", link: "/#kmeny" },
@@ -30,6 +29,7 @@ const IndexPage: React.FC<PageProps> = () => {
       <Navigation items={navItems} />
       <main className="pt-10 bg-brand-second">
         <Intro />
+        <Claim />
         <Credit />
         <Pillars />
         <How />
