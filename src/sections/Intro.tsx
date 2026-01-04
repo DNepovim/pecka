@@ -53,7 +53,7 @@ export const Intro: React.FC = () => (
       </p>
     </div>
     <StaticImage
-      src="../images/30.HEIC"
+      src="../images/30.jpg"
       alt=""
       className="!absolute inset-0 opacity-40"
       transformOptions={{ fit: "cover" }}
