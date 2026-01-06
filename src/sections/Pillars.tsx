@@ -15,7 +15,7 @@ export const Pillars: React.FC = () => (
     <div className="text-center">
       <Q>
         Duch, osobnost, dovednosti.
-        <br /> To jsou tři kmeny stromu, který se v létě obsype švestkami. Proč?
+        <br /> To jsou tři kmeny stromu, který se v létě obsype višněmi. Proč?
       </Q>
     </div>
     <Carousel
