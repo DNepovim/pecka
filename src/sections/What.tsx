@@ -79,7 +79,7 @@ export const What: React.FC = () => {
               text: "„Z Pecky si odnáším hlavně nové přátele. Jestli mi něco dala, byli to hlavně lidi a jejich nové pohledy na věc. Právě častý prostor pro debatu pro mne byl z nemála tím, z čeho jsem si toho odnesl nejvíce.“",
             },
             {
-              name: "Dorotka",
+              name: "Dorotka N.",
               fullName: "Dorotea Neumannová",
               text: "Tento mega lákavý text píšu nad vlastnoručně vyrobeným deníčkem z kurzu Pecka. Mám v něm založeno několik materiálů o komunikaci, práci v týmu, o spirituálních temperamentech a o biblických programech všeho druhu. Pár těchto listů už má svou kopii k použití při somákování. Několik stránek deníku nese památku pokusů zachovat si užitečné, motivující, srandovní myšlenky, které během peckových dnů proběhly mezi námi, ve mně. A taky je v něm hodně nepopsaných stránek, které jsou vzpomínkou na všechny ty chvíle, kdy bylo mnohem důležitější a povznášející si povídat, objímat se, sdílet zkušenosti s účastníky a kurzovým týmem. Chceš-li být obohacen takovým deníkem, staň se kurzu Pecka účastníkem!",
             },
@@ -87,6 +87,16 @@ export const What: React.FC = () => {
               name: "Míša",
               fullName: "Míša Řežábková",
               text: "Pecka je fakt jedinečný časoprostor. Je to spojením her a zábavy, učení se nových dovedností, sdílení zkušeností a aktivní prožívání víry. I když nejsem členka žádného SOMu, stejně pro mě byl program zajímavý a celkem mě nahlodal k tomu, že bych chtěla něco organizovat. Pecku doporučuju všem, i když třeba (zatím) nejste v SOMu.",
+            },
+            {
+              name: "Dorotka S.",
+              fullName: "Dorota Stejskalová",
+              text: "Na Pecce se mi moc líbilo, že jsem tam potkala skvělou partu lidí, se kterými jsem mohla sdílet své nápady a problémy a kteří mě vždy podporovali. Kromě sdílení jsme se také vzdělávali a dozvěděla jsem se hromadu nových a užitečných věcí. Chodili jsme i na výlety a hráli různé hry, takže atmosféra byla vcelku uvolněná. Pecku bych doporučila úplně všem – jak těm, kdo váhají, jestli se mají do něčeho pustit, nebo jsou bezradní, tak i těm, kteří chtějí svou práci jen zdokonalit.",
+            },
+            {
+              name: "Míri",
+              fullName: "Miriam Matušková",
+              text: "Díky Pecce jsem prožila čas plný neobyčejných zážitků, obohacujících informací a inspirativních rozhovorů. Setkání s lidmi ze “stejného oboru“, sdílení zkušeností s plánováním akcí a zjišťování jak to mají ostatní, mi dalo motivaci zlepšovat jak naše akce, tak i spolupráci v týmu. Doporučuju každému, protože se dozví, jak organizovat akce, aby fungovaly, dostane spoustu možností poznávat svou víru a objevovat sebe sama v neobvyklých situacích a hrách. A v neposlední řadě bude součástí skvělé party, co umí naslouchat.",
             },
           ]}
         />
