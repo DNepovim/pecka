@@ -23,7 +23,7 @@ export const Intro: React.FC = () => (
         <br />
         a přihlásit se na něj budeš moct od
         <br />{" "}
-        <span className="rounded-md text-xl font-semibold">14. 1. 2026</span>
+        <span className="rounded-md text-xl font-semibold">14. 1. 2026, 20:00</span>
       </p>
       <Button to="https://docs.google.com/forms/d/e/1FAIpQLSdz9QuW5O-HNEEYGhkO2wlzYsKMLff0uFyapTvmBmO-yEq8sg/viewform?usp=sf_link">
         Dejte mi vědět
