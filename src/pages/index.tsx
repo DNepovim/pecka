@@ -135,6 +135,20 @@ const IndexPage: React.FC<PageProps> = () => {
               name: "Matouš",
               fullName: "Matouš Tkadleček",
             },
+            {
+              image: (
+                <StaticImage
+                  src="../images/honza.jpg"
+                  alt=""
+                  width={200}
+                  height={200}
+                  className="rounded-full float-left mr-4 mb-4 shape-outside"
+                />
+              ),
+              text: "",
+              name: "Honza",
+              fullName: "Jan Nováček",
+            },
           ]}
         />
         <Informations />
