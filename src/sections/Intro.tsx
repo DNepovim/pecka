@@ -15,41 +15,15 @@ export const Intro: React.FC = () => (
         Pecka
       </h1>
       <p className="px-2 pt-1 mb-0 inline-block text-sm">
-        další ročník proběhne
-        <br />{" "}
         <span className="bg-yellow-second rounded-md text-xl font-semibold">
           26. 7. – 2. 8. 2026
         </span>
-        <br />
-        a přihlásit se na něj budeš moct od
-        <br />{" "}
-        <span className="rounded-md text-xl font-semibold">14. 1. 2026, 20:00</span>
       </p>
-      <Button to="https://docs.google.com/forms/d/e/1FAIpQLSdz9QuW5O-HNEEYGhkO2wlzYsKMLff0uFyapTvmBmO-yEq8sg/viewform?usp=sf_link">
-        Dejte mi vědět
+      <Button to="https://akce.e-cirkev.cz/register/204">
+        Přihlásit se na Pecku 🍒
       </Button>
       <p className="px-2 py-1 inline-block font-italic text-xs max-w-80">
-        Sleduj{" "}
-        <strong>
-          <a
-            className="text-brand-first hover:underline"
-            href="https://mladez.evangnet.cz/"
-            target="_blank"
-          >
-            web
-          </a>
-        </strong>{" "}
-        nebo{" "}
-        <strong>
-          <a
-            className="text-brand-first hover:underline"
-            href="https://www.facebook.com/evangelickamladez"
-            target="_blank"
-          >
-            facebook
-          </a>
-        </strong>{" "}
-        evangelické mládeže, nebo nám dej svůj e-mail a mi ti napíšeme.
+        Přihlašovat se můžeš do 19. 4. 2026.
       </p>
     </div>
     <StaticImage

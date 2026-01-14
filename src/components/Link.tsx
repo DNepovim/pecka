@@ -9,7 +9,7 @@ export interface LinkProps {
   children?: ReactNode
 }
 
-const defaultClassName = "hover-underline-base"
+const defaultClassName = "underline hover:no-underline"
 
 export const Link: React.FC<LinkProps> = ({
   to,

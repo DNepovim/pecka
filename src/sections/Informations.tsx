@@ -23,7 +23,12 @@ export const Informations: React.FC = () => (
       <H4>Termín a místo</H4>
       <P>
         26. 7. – 2. 8. 2026 – chata{" "}
-        <Link className="underline hover:no-underline" to="https://drevomorka.skauting.cz">Dřevomorka</Link>{" "}
+        <Link
+          className="underline hover:no-underline"
+          to="https://drevomorka.skauting.cz"
+        >
+          Dřevomorka
+        </Link>{" "}
         v&nbsp;Lužických horách.
       </P>
       <H4>Pro koho</H4>
@@ -48,9 +53,15 @@ export const Informations: React.FC = () => (
           <li>Věk alepsoň 15 let v době konání kurzu.</li>
           <li>Účast na celé délce kurzu.</li>
         </ul>
+        Pokud některou podmínku nemůžeš splnit, ale o účast stojíš, napiš nám na{" "}
+        <Link to="mailto:budeto@kurzpecka.cz">budeto@kurzpecka.cz</Link> a
+        uvidíme, co se s tím dá dělat.
       </P>
       <H4>Přihlašování</H4>
-      <P>vypukne 14. 1. 2026</P>
+      <P>
+        Přihlásit se můžeš do 19. 4. 2026{" "}
+        <Link to="https://akce.e-cirkev.cz/register/204">zde</Link>.{" "}
+      </P>
     </div>
   </Section>
 );
