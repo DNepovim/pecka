@@ -23,7 +23,7 @@ export const Intro: React.FC = () => (
         Přihlásit se na Pecku 🍒
       </Button>
       <p className="px-2 py-1 inline-block font-italic text-xs max-w-80">
-        Přihlašovat se můžeš do 19. 4. 2026.
+        Přihlašovat se můžeš do 20. 4. 2026.
       </p>
     </div>
     <StaticImage

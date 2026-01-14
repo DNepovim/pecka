@@ -59,7 +59,7 @@ export const Informations: React.FC = () => (
       </P>
       <H4>Přihlašování</H4>
       <P>
-        Přihlásit se můžeš do 19. 4. 2026{" "}
+        Přihlásit se můžeš do 20. 4. 2026{" "}
         <Link to="https://akce.e-cirkev.cz/register/204">zde</Link>.{" "}
       </P>
     </div>
