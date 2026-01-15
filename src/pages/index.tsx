@@ -161,5 +161,36 @@ const IndexPage: React.FC<PageProps> = () => {
 export default IndexPage;
 
 export const Head: HeadFC = () => (
-  <title>Pecka – kurz pro pracovníky s mládeží v ČCE</title>
+  <>
+    <title>🍒 Pracuješ s mládeží v církvi? Tak tohle je akce pro tebe! </title>
+    <meta
+      name="description"
+      content="Pecka je kurz pro pracovníky s mládeží, který tě vybaví zkušenostmi, zážitky a partou skvělých lidí."
+    />
+
+    <meta property="og:url" content="https://www.kurzpecka.cz/" />
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:title"
+      content="🍒 Pracuješ s mládeží v církvi? Tak tohle je akce pro tebe! "
+    />
+    <meta
+      property="og:description"
+      content="Pecka je kurz pro pracovníky s mládeží, který tě vybaví zkušenostmi, zážitky a partou skvělých lidí."
+    />
+    <meta property="og:image" content="/images/og.jpg" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta property="twitter:domain" content="kurzpecka.cz" />
+    <meta property="twitter:url" content="https://www.kurzpecka.cz/" />
+    <meta
+      name="twitter:title"
+      content="🍒 Pracuješ s mládeží v církvi? Tak tohle je akce pro tebe! "
+    />
+    <meta
+      name="twitter:description"
+      content="Pecka je kurz pro pracovníky s mládeží, který tě vybaví zkušenostmi, zážitky a partou skvělých lidí."
+    />
+    <meta name="twitter:image" content="/images/og.jpg" />
+  </>
 );
