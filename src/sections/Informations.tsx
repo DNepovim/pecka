@@ -48,11 +48,11 @@ export const Informations: React.FC = () => (
         částku hradí)
       </P>
       <H4>Podmínky účasti</H4>
+      <ul>
+        <li>Věk alepsoň 15 let v době konání kurzu.</li>
+        <li>Účast na celé délce kurzu.</li>
+      </ul>
       <P>
-        <ul>
-          <li>Věk alepsoň 15 let v době konání kurzu.</li>
-          <li>Účast na celé délce kurzu.</li>
-        </ul>
         Pokud některou podmínku nemůžeš splnit, ale o účast stojíš, napiš nám na{" "}
         <Link to="mailto:budeto@kurzpecka.cz">budeto@kurzpecka.cz</Link> a
         uvidíme, co se s tím dá dělat.

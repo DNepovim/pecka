@@ -3,8 +3,8 @@ import React, { useState } from "react";
 import { Section } from "../components/Section";
 import { Carousel } from "../components/Carousel/Carousel";
 import { Article } from "./Article";
-import { Button } from "../components/Button";
 import { H3 } from "../components/Typography";
+import { Gallery } from "../components/Gallery";
 
 const articlesFirst = [
   {
@@ -45,7 +45,6 @@ const articlesSecond = [
 
 export const What: React.FC = () => {
   const [isOpened, setIsOpened] = useState(false);
-  console.log("isOpened", isOpened);
   return (
     <Section
       id="jake-to-bylo"
@@ -100,181 +99,21 @@ export const What: React.FC = () => {
             },
           ]}
         />
-        <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 px-4 gap-4 mb-16 max-w-screen-2xl mx-auto">
-          <StaticImage
-            src="../images/20.jpg"
-            alt=""
-            width={728}
-            height={444}
-            className="md:col-span-2 md:row-span-2"
-          />
-          <StaticImage src="../images/10.jpg" alt="" width={364} height={222} />
-          <StaticImage src="../images/13.jpg" alt="" width={364} height={222} />
-          <StaticImage src="../images/24.jpg" alt="" width={364} height={222} />
-          <StaticImage
-            src="../images/11.jpg"
-            alt=""
-            width={280}
-            height={540}
-            className="md:row-span-2"
-          />
-          <StaticImage
-            src="../images/16.jpg"
-            alt=""
-            width={364}
-            height={222}
-            className={!isOpened ? "max-md:hidden" : ""}
-          />
-          <StaticImage
-            src="../images/18.jpg"
-            alt=""
-            width={364}
-            height={222}
-            className={!isOpened ? "max-md:hidden" : ""}
-          />
-          <StaticImage
-            src="../images/14.jpg"
-            alt=""
-            width={364}
-            height={222}
-            className={!isOpened ? "max-md:hidden" : ""}
-          />
-          <StaticImage
-            src="../images/19.jpg"
-            alt=""
-            width={364}
-            height={222}
-            className="md:col-span-2"
-          />
-          <StaticImage
-            src="../images/21.jpg"
-            alt=""
-            width={364}
-            height={222}
-            className={!isOpened ? "max-md:hidden" : ""}
-          />
-          <StaticImage
-            src="../images/22.jpg"
-            alt=""
-            width={364}
-            height={222}
-            className={isOpened ? "" : "max-md:hidden"}
-          />
-          <StaticImage
-            src="../images/23.jpg"
-            alt=""
-            width={364}
-            height={222}
-            className={isOpened ? "" : "max-md:hidden"}
-          />
-          <StaticImage
-            src="../images/25.jpg"
-            alt=""
-            width={364}
-            height={222}
-            className={isOpened ? "" : "max-md:hidden"}
-          />
-          <StaticImage
-            src="../images/26.jpg"
-            alt=""
-            width={364}
-            height={222}
-            className={isOpened ? "" : "max-md:hidden"}
-          />
-          <StaticImage
-            src="../images/27.jpg"
-            alt=""
-            width={364}
-            height={222}
-            className={isOpened ? "" : "max-md:hidden"}
-          />
-          <StaticImage
-            src="../images/29.jpg"
-            alt=""
-            width={364}
-            height={222}
-            className={isOpened ? "" : "max-md:hidden"}
-          />
-          <StaticImage
-            src="../images/31.jpg"
-            alt=""
-            width={364}
-            height={222}
-            className={isOpened ? "" : "max-md:hidden"}
-          />
-          <StaticImage
-            src="../images/33.jpg"
-            alt=""
-            width={364}
-            height={222}
-            className={isOpened ? "" : "max-md:hidden"}
-          />
-          <StaticImage
-            src="../images/07.jpg"
-            alt=""
-            width={728}
-            height={444}
-            className={`md:col-span-2 md:row-span-2 ${isOpened ? "" : "max-md:hidden"}`}
-          />
-          <StaticImage
-            src="../images/01.jpg"
-            alt=""
-            width={728}
-            height={444}
-            objectPosition="top"
-            className={`md:col-span-2 md:row-span-2 ${isOpened ? "" : "max-md:hidden"}`}
-          />
-          <StaticImage
-            src="../images/08.jpg"
-            alt=""
-            width={364}
-            height={222}
-            className={isOpened ? "" : "max-md:hidden"}
-          />
-          <StaticImage
-            src="../images/06.jpg"
-            alt=""
-            width={364}
-            height={222}
-            className={isOpened ? "" : "max-md:hidden"}
-          />
-          <div className="col-span-full justify-center flex">
-            <button
-              className={`rounded-md w-fit mx-auto bg-brown-first font-bold flex items-end gap-2 py-2 px-8 text-white ${isOpened ? "hidden" : "md:hidden"}`}
-              onClick={() => {
-                setIsOpened(true);
-              }}
-            >
-              Další fotky
-            </button>
-            <Button
-              to="https://photos.app.goo.gl/ud146RC1DaD5TTHU8"
-              className="max-md:hidden"
-            >
-              Více fotek
-            </Button>
-            <Button
-              to="https://photos.app.goo.gl/ud146RC1DaD5TTHU8"
-              className={`${isOpened ? "md:hidden" : "hidden"}`}
-            >
-              Ještě více fotek
-            </Button>
-          </div>
-        </div>
+        <Gallery isOpened={isOpened} setIsOpened={setIsOpened} />
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 px-4 gap-8 max-w-screen-2xl mx-auto">
           <div className="col-span-full">
             <H3 className="text-center">Švestkový ročník 2025</H3>
           </div>
-          {articlesSecond.map((article) => (
-            <Article {...article} />
+          {articlesSecond.map((article, index) => (
+            <Article key={index} {...article} />
           ))}
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 px-4 gap-8 max-w-screen-2xl mx-auto">
           <div className="col-span-full">
             <H3 className="text-center mt-16">Broskvový ročník 2023/24</H3>
           </div>
-          {articlesFirst.map((article) => (
-            <Article {...article} />
+          {articlesFirst.map((article, index) => (
+            <Article key={index} {...article} />
           ))}
         </div>
       </div>
