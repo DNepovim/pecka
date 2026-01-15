@@ -1,7 +1,9 @@
 import { GatsbyImage, getImage, IGatsbyImageData } from "gatsby-plugin-image";
 import { graphql, useStaticQuery } from "gatsby";
-import React from "react";
+import React, { useState } from "react";
 import { Button } from "./Button";
+import Lightbox from "yet-another-react-lightbox";
+import "yet-another-react-lightbox/styles.css";
 
 interface GalleryProps {
   isOpened: boolean;
@@ -18,7 +20,7 @@ const getImageClasses = (index: number, isOpened: boolean): string => {
     classes.push("md:row-span-2");
   } else if (index === 8) {
     classes.push("md:col-span-2");
-  } else if (index === 18 || index === 19) {
+  } else if (index === 17) {
     classes.push("md:col-span-2 md:row-span-2");
   }
 
@@ -31,6 +33,8 @@ const getImageClasses = (index: number, isOpened: boolean): string => {
 };
 
 export const Gallery: React.FC<GalleryProps> = ({ isOpened, setIsOpened }) => {
+  const [lightboxIndex, setLightboxIndex] = useState(-1);
+
   const data = useStaticQuery(graphql`
     query GalleryImages {
       allFile(
@@ -38,20 +42,31 @@ export const Gallery: React.FC<GalleryProps> = ({ isOpened, setIsOpened }) => {
         sort: { name: ASC }
       ) {
         nodes {
+          id
           name
           base
           childImageSharp {
-            gatsbyImageData(width: 728, placeholder: NONE)
+            gatsbyImageData(width: 1920, placeholder: NONE)
           }
         }
       }
     }
   `);
-  console.log("data", data)
 
   const images = data.allFile.nodes.filter(
     (node: { childImageSharp: { gatsbyImageData: IGatsbyImageData } | null }) =>
       node.childImageSharp?.gatsbyImageData
+  );
+
+  const slidesData = images.map(
+    (node: {
+      id: string;
+      base: string;
+      childImageSharp: { gatsbyImageData: IGatsbyImageData };
+    }) => ({
+      id: node.id,
+      ...node.childImageSharp.gatsbyImageData,
+    })
   );
 
   return (
@@ -59,6 +74,7 @@ export const Gallery: React.FC<GalleryProps> = ({ isOpened, setIsOpened }) => {
       {images.map(
         (
           node: {
+            id: string;
             base: string;
             childImageSharp: { gatsbyImageData: IGatsbyImageData };
           },
@@ -68,13 +84,22 @@ export const Gallery: React.FC<GalleryProps> = ({ isOpened, setIsOpened }) => {
           if (!image) return null;
 
           return (
-            <GatsbyImage
+            <div
               key={node.base}
-              image={image}
-              alt=""
-              className={getImageClasses(index, isOpened)}
-              objectPosition={index === 19 ? "top" : undefined}
-            />
+              className={`sm:cursor-pointer ${getImageClasses(index, isOpened)}`}
+              onClick={() => {
+                if (window.innerWidth >= 640) {
+                  setLightboxIndex(index);
+                }
+              }}
+            >
+              <GatsbyImage
+                image={image}
+                alt=""
+                className="h-full"
+                objectPosition={index === 19 ? "top" : undefined}
+              />
+            </div>
           );
         }
       )}
@@ -100,6 +125,38 @@ export const Gallery: React.FC<GalleryProps> = ({ isOpened, setIsOpened }) => {
           Ještě více fotek
         </Button>
       </div>
+
+      <Lightbox
+        open={lightboxIndex > -1}
+        index={lightboxIndex}
+        on={{ exited: () => setLightboxIndex(-1) }}
+        slides={slidesData}
+        carousel={{ imageFit: "contain", padding: 50 }}
+        controller={{ closeOnBackdropClick: true }}
+        styles={{
+          container: {
+            backgroundColor: "rgba(139, 90, 43, 0.9)",
+            backdropFilter: "blur(5px)",
+          },
+        }}
+        render={{
+          slide: (props) => {
+            const slide = (props as unknown as { slide: IGatsbyImageData & { id: string } }).slide;
+            const image = getImage(slide);
+            if (!image) return null;
+
+            return (
+              <GatsbyImage
+                key={slide.id}
+                image={image}
+                alt=""
+                objectFit="contain"
+                className="max-h-full max-w-full"
+              />
+            );
+          },
+        }}
+      />
     </div>
   );
 };

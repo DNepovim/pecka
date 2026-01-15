@@ -34,7 +34,8 @@
     "react-responsive-carousel": "^3.2.23",
     "rooks": "^7.14.1",
     "tailwindcss": "^3.3.2",
-    "use-onclickoutside": "^0.4.1"
+    "use-onclickoutside": "^0.4.1",
+    "yet-another-react-lightbox": "^3.28.0"
   },
   "devDependencies": {
     "@types/node": "^20.3.1",
