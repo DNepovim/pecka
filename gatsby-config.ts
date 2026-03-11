@@ -30,7 +30,7 @@ const config: GatsbyConfig = {
           __dirname,
           `src`,
           `images`,
-          process.env.GATSBY_SITE ?? ""
+          process.env.GATSBY_SITE ?? "",
         ),
       },
     },
@@ -54,6 +54,13 @@ const config: GatsbyConfig = {
       resolve: "gatsby-plugin-manifest",
       options: {
         icon: "src/images/visen.png",
+      },
+    },
+    {
+      resolve: `gatsby-plugin-umami`,
+      options: {
+        websiteId: process.env.UMAMI_WEBSITE_ID,
+        srcUrl: "https://cloud.umami.is/script.js",
       },
     },
   ],

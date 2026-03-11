@@ -25,6 +25,7 @@
     "gatsby-plugin-image": "^3.11.0",
     "gatsby-plugin-postcss": "^6.11.0",
     "gatsby-plugin-sharp": "^5.11.0",
+    "gatsby-plugin-umami": "^0.1.5",
     "gatsby-source-filesystem": "^5.11.0",
     "gatsby-transformer-sharp": "^5.11.0",
     "hamburger-react": "^2.5.0",
