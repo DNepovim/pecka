@@ -59,7 +59,7 @@ const config: GatsbyConfig = {
     {
       resolve: `gatsby-plugin-umami`,
       options: {
-        websiteId: process.env.UMAMI_WEBSITE_ID,
+        websiteId: "8f2fb2c7-5768-43fe-b81b-1eb8f20a4395",
         srcUrl: "https://cloud.umami.is/script.js",
       },
     },
