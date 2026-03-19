@@ -113,13 +113,13 @@ export const Gallery: React.FC<GalleryProps> = ({ isOpened, setIsOpened }) => {
           Další fotky
         </button>
         <Button
-          to="https://photos.app.goo.gl/ud146RC1DaD5TTHU8"
+          to="https://photos.app.goo.gl/gchMvMbpWfhcqud56"
           className="max-md:hidden"
         >
           Více fotek
         </Button>
         <Button
-          to="https://photos.app.goo.gl/ud146RC1DaD5TTHU8"
+          to="https://photos.app.goo.gl/gchMvMbpWfhcqud56"
           className={`${isOpened ? "md:hidden" : "hidden"}`}
         >
           Ještě více fotek
