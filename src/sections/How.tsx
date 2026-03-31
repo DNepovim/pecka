@@ -105,18 +105,6 @@ export const How: React.FC = () => (
           stojí koncept Nenásilné komunikace Marshalla Rosenberga. A protože
           komunikace je klíčovou dovedností každého, kdo pracuje s lidmi, budeme
           se jí na Pecce věnovat celé jedno dopoledne.
-          <br />
-          <strong>Simply the Story</strong> &#x279E; Nedílnou součástí
-          evangelických akcí je práce s biblickýcmi příběhy. Často si při
-          přípravě programů na toto téma vystačíme s vlastní kreativitou. Občas
-          nám ale může pomoct osvědčená metoda. Pár takových vám na Pecce
-          nabídneme. Například{" "}
-          <a href="https://www.simplythestory.org/" target="_blank">
-            Simply the Story
-          </a>
-          . Jde o postup, který vám pomůže si biblický příběh zapamatovat a také
-          ho dobře odvyprávět, najít v něm poklady a formulovat a klást k němu
-          otázky.
           <br /> <strong>Práce v týmu</strong> &#x279E; Málo kdo připravuje akce
           sám a hladce fungující tým vede nejen k lepším akcím, ale i k lepšímu
           pocitu z jejich příprav. Pro dobré fungování v týmu je třeba umět
