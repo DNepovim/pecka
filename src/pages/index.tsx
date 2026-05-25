@@ -135,6 +135,20 @@ const IndexPage: React.FC<PageProps> = () => {
               name: "Matouš",
               fullName: "Matouš Tkadleček",
             },
+            {
+              image: (
+                <StaticImage
+                  src="../images/peckos.png"
+                  alt=""
+                  width={200}
+                  height={200}
+                  className="rounded-full float-left mr-4 mb-4 shape-outside"
+                />
+              ),
+              text: "Ahoj, oslovuj mě mým uměleckým jménem MC Peckos, na jiné stejně neslyším. Rád o sobě říkám, že jsem trochu tajemný člen týmu. Objevuju se ve chvílích, kdy se mi zdá, že je potřeba naboostovat atmosféru novou energií. Pak zase mizím skládat rapové balady. Na pizzu nedávám ananas, ale avokádo. Traduje se o mě, že se na kurzu nikdy nevyskytuju pohromadě se všemi členy týmu, to je ale fáma. Jsem celkem exhibicionista, libuju si v epických příchodech do místnosti a v moderaci miniher s peckami.",
+              name: "Peckos",
+              fullName: "Peckos",
+            },
           ]}
         />
         <Informations />
