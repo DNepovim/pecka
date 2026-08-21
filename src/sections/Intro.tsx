@@ -16,14 +16,30 @@ export const Intro: React.FC = () => (
       </h1>
       <p className="px-2 pt-1 mb-0 inline-block text-sm">
         <span className="bg-yellow-second rounded-md text-xl font-semibold">
-          26. 7. – 2. 8. 2026
+          Višňový ročník je za námi.
         </span>
       </p>
-      <Button to="https://akce.e-cirkev.cz/register/204">
-        Přihlásit se na Pecku 🍒
-      </Button>
       <p className="px-2 py-1 inline-block font-italic text-xs max-w-80">
-        Přihlašovat se můžeš do 20. 4. 2026.
+        Připravujme další na léto 2027
+      </p>
+      <p className="px-2 py-1 inline-block font-italic text-xs max-w-80">
+        Sleduj{" "}
+        <a
+          className="underline hover:no-underline"
+          href="https://mladez.evangnet.cz"
+          target="_blank"
+        >
+          web
+        </a>
+        , nebo{" "}
+        <a
+          className="underline hover:no-underline"
+          href="https://www.facebook.com/evangelickamladez"
+          target="_blank"
+        >
+          facebook
+        </a>{" "}
+        evangelické mládeže.
       </p>
     </div>
     <StaticImage
