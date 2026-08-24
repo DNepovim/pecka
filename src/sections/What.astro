@@ -1,0 +1,82 @@
+---
+import type { ImageMetadata } from 'astro'
+import { getImage } from 'astro:assets'
+
+import Article from '@/components/Article.astro'
+import { Carousel } from '@/components/Carousel/Carousel'
+import { Gallery, type GalleryImage } from '@/components/Gallery'
+import Img from '@/components/Img.astro'
+import Section from '@/components/Section.astro'
+import H3 from '@/components/Typography/H3.astro'
+import { articlesFirst, articlesSecond } from '@/data/articles'
+import { testimonials } from '@/data/testimonials'
+import forest from '@/images/forest.webp'
+import { rawDimensions } from '@/utils/imageDimensions'
+
+/*
+ * Replaces the `allFile(filter: { relativeDirectory: { eq: "gallery" } }, sort: { name: ASC })`
+ * GraphQL query. The order is load-bearing — `Gallery` gives specific indices
+ * their own grid spans.
+ */
+const galleryModules = import.meta.glob<{ default: ImageMetadata }>(
+  '../images/gallery/*.jpg',
+  { eager: true },
+)
+
+const galleryImages: GalleryImage[] = await Promise.all(
+  Object.entries(galleryModules)
+    .sort(([a], [b]) => a.localeCompare(b))
+    .map(async ([, module]) => {
+      const image = await getImage({
+        src: module.default,
+        width: 1920,
+        widths: [400, 640, 960, 1280, 1920],
+      })
+      const raw = rawDimensions(module.default)
+
+      return {
+        src: image.src,
+        srcSet: image.srcSet.attribute || undefined,
+        width: 1920,
+        height: Math.round((raw.height / raw.width) * 1920),
+      }
+    }),
+)
+---
+
+<Section
+  id="jake-to-bylo"
+  title="Jaké byly předchozí Pecky?"
+  titleColor="text-brand-first"
+  bg="bg-brand-second"
+  class="relative min-h-[30rem]"
+  full
+>
+  <div class="relative z-10">
+    <p class="mx-auto mb-8 max-w-3xl text-center font-bold italic">
+      První broskvová na přelomu roků 2023 a 2024 a druhá švestková v létě 2025. Podívejte
+      se co o nich napsali účastníci.
+    </p>
+    <Carousel isCenterd items={testimonials} client:visible />
+    <Gallery images={galleryImages} client:visible />
+    <div
+      class="mx-auto grid max-w-screen-2xl grid-cols-1 gap-8 px-4 md:grid-cols-2 lg:grid-cols-3"
+    >
+      <div class="col-span-full">
+        <H3 class="text-center">Švestkový ročník 2025</H3>
+      </div>
+      {articlesSecond.map((article) => <Article {...article} />)}
+    </div>
+    <div
+      class="mx-auto grid max-w-screen-2xl grid-cols-1 gap-8 px-4 md:grid-cols-2 lg:grid-cols-3"
+    >
+      <div class="col-span-full">
+        <H3 class="mt-16 text-center">Broskvový ročník 2023/24</H3>
+      </div>
+      {articlesFirst.map((article) => <Article {...article} />)}
+    </div>
+  </div>
+  <div class="absolute right-0 -bottom-4 left-0 z-0 opacity-20">
+    <Img src={forest} alt="" />
+  </div>
+</Section>

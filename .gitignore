@@ -1,5 +1,8 @@
 node_modules/
-.cache/
-public
-src/gatsby-types.d.ts
+dist/
+.astro/
+.vercel/
+.baseline/
 /**/.DS_Store
+.env
+.env.production

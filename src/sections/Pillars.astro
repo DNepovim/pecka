@@ -1,0 +1,52 @@
+---
+import Section from '@/components/Section.astro'
+import Q from '@/components/Typography/Q.astro'
+import dovednosti from '@/images/dovednosti.png'
+import osobnost from '@/images/osobnost.png'
+import spiritualita from '@/images/spiritualita.svg'
+import { toCarouselImage } from '@/utils/toCarouselImage'
+
+import { PillarsCarousel } from './PillarsCarousel'
+
+const iconClassName = 'float-left mr-4 mb-4 h-48 w-48 object-contain shape-outside'
+
+const images = {
+  osobnost: await toCarouselImage({
+    src: osobnost,
+    alt: 'Dovednosti',
+    width: 400,
+    height: 400,
+    className: iconClassName,
+  }),
+  spiritualita: await toCarouselImage({
+    src: spiritualita,
+    alt: 'Dovednosti',
+    width: 400,
+    height: 400,
+    className: iconClassName,
+  }),
+  dovednosti: await toCarouselImage({
+    src: dovednosti,
+    alt: 'Dovednosti',
+    width: 842,
+    height: 791,
+    className: iconClassName,
+  }),
+}
+---
+
+<Section
+  id="kmeny"
+  title="Na čem stavíme?"
+  titleColor="text-brand-first"
+  bg="bg-beige-first"
+  full
+>
+  <div class="text-center">
+    <Q>
+      Duch, osobnost, dovednosti.
+      <br /> To jsou tři kmeny stromu, který se v létě obsype višněmi. Proč?
+    </Q>
+  </div>
+  <PillarsCarousel images={images} client:visible />
+</Section>

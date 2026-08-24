@@ -1,6 +1,33 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import 'tailwindcss';
+
+/*
+ * Design tokens, ported 1:1 from the Tailwind 3 `tailwind.config.js`.
+ * Breakpoints are deliberately non-default (rem based) — `max-md:` / `lg:`
+ * variants across the site are written against these values.
+ */
+@theme {
+  --breakpoint-sm: 20rem;
+  --breakpoint-md: 40rem;
+  --breakpoint-lg: 60rem;
+  --breakpoint-xl: 80rem;
+  --breakpoint-2xl: 100rem;
+
+  --font-head: 'Amatic SC', serif;
+  --font-text: 'Montserrat', sans-serif;
+
+  --color-brand-first: #9a1e38;
+  --color-brand-second: #ffe8ca;
+  --color-yellow-first: #f2dd80;
+  --color-yellow-second: #e8dd2f;
+  --color-blue-first: #08c4be;
+  --color-blue-second: #052f32;
+  /* `thirdt` is a typo carried over from the original config — used as `bg-blue-thirdt` */
+  --color-blue-thirdt: #0074bc;
+  --color-beige-first: #f6f6e9;
+  --color-red-first: #ff0000;
+  --color-clay-first: #c8968a;
+  --color-brown-first: #7b492e;
+}
 
 html {
   scroll-behavior: smooth;
@@ -9,6 +36,10 @@ html {
   font-size: 18px;
 }
 
+/*
+ * Deliberately unlayered so it keeps overriding Tailwind's own `container`
+ * utility, exactly as it did under Tailwind 3.
+ */
 .container {
   width: 100%;
   margin-right: auto;

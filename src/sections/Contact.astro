@@ -1,0 +1,28 @@
+---
+import Img from '@/components/Img.astro'
+import Link from '@/components/Link.astro'
+import Section from '@/components/Section.astro'
+import pecky from '@/images/pecky.png'
+---
+
+<Section
+  id="kontakt"
+  title="Kontakt"
+  titleColor="text-blue-first"
+  bg="bg-blue-second"
+  class="min-h-[300px]"
+>
+  <p class="relative z-10 text-center text-white md:text-xl">
+    Zajímá vás o kurzu Pecka něco, co jste nenašli na webu?
+    <br />
+    Napište nám na e-mail{' '}<a class="text-blue-first" href="mailto:budeto@kurzpecka.cz"
+      >budeto@kurzpecka.cz</a
+    >{' '}(odpoví vám Damka).
+  </p>
+  <div class="absolute right-0 bottom-0 opacity-50">
+    <Img src={pecky} alt="" width={600} height={300} fit="cover" />
+  </div>
+  <p class="text-beige-first/60 absolute right-2 bottom-2 text-xs">
+    Web vypěstoval <Link to="mailto:dominik@semcr.cz">Dominik</Link>
+  </p>
+</Section>

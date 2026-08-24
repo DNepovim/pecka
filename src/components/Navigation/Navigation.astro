@@ -1,0 +1,17 @@
+---
+import { getImage } from 'astro:assets'
+
+import { Navigation } from '@/components/Navigation/Navigation'
+import { navItems } from '@/data/navItems'
+import visen from '@/images/visen.png'
+
+const logoHeight = 25
+const logoWidth = Math.round((visen.width / visen.height) * logoHeight)
+const logoImage = await getImage({ src: visen, height: logoHeight, width: logoWidth })
+---
+
+<Navigation
+  items={navItems}
+  logo={{ src: logoImage.src, width: logoWidth, height: logoHeight }}
+  client:load
+/>

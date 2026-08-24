@@ -1,49 +1,54 @@
-<p align="center">
-  <a href="https://www.gatsbyjs.com/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter-ts">
-    <img alt="Gatsby" src="https://www.gatsbyjs.com/Gatsby-Monogram.svg" width="60" />
-  </a>
-</p>
-<h1 align="center">
-  Gatsby Minimal TypeScript Starter
-</h1>
+# Kurz Pecka
 
-## 🚀 Quick start
+Website for **Pecka**, a course for youth workers in the Evangelical Church of
+Czech Brethren (ČCE) — <https://www.kurzpecka.cz>.
 
-1.  **Create a Gatsby site.**
+Single page in Czech (`/`, plus a `/404`), built with [Astro](https://astro.build)
+and Tailwind CSS v4, deployed as a static site on Vercel.
 
-    Use the Gatsby CLI to create a new site, specifying the minimal TypeScript starter.
+## Stack
 
-    ```shell
-    # create a new Gatsby site using the minimal TypeScript starter
-    npm init gatsby -- -ts
-    ```
+- **Astro 5** — static output (`dist/`), `astro:assets` for image processing
+- **Tailwind CSS v4** — via `@tailwindcss/vite`, design tokens in
+  `src/styles/global.css` (`@theme`), no `tailwind.config.js`
+- **React 18 islands** — only for the genuinely interactive parts: the
+  carousel, the photo gallery + lightbox, and the navigation
+- **pnpm** — the lockfile is `pnpm-lock.yaml`; don't use npm or yarn
+- ESLint (flat config) + Prettier + knip, TypeScript strict
 
-2.  **Start developing.**
+## Commands
 
-    Navigate into your new site’s directory and start it up.
+| Command             | What it does                                        |
+| ------------------- | --------------------------------------------------- |
+| `pnpm dev`          | Dev server at <http://localhost:4321>                |
+| `pnpm build`        | Static build into `dist/`                            |
+| `pnpm preview`      | Serve the built site locally                         |
+| `pnpm check`        | typecheck + lint + format check + knip               |
+| `pnpm format:write` | Apply Prettier formatting                            |
 
-    ```shell
-    cd my-gatsby-site/
-    npm run develop
-    ```
+## Layout
 
-3.  **Open the code and start customizing!**
+```
+src/
+├── components/       shared UI — .astro by default, .tsx only for islands
+│   ├── Carousel/     react-responsive-carousel island (styles in src/styles/carousel.css)
+│   ├── Navigation/   fixed header island + its .astro wrapper
+│   ├── Gallery.tsx   photo grid + yet-another-react-lightbox island
+│   └── Typography/   H2, H3, H4, P, Q, C, S
+├── data/             copy that isn't markup: nav items, team, articles, testimonials
+├── images/           processed at build time by astro:assets
+├── layouts/          Layout.astro — <head>, fonts, Umami, meta tags
+├── pages/            index.astro, 404.astro
+├── sections/         the page sections, top to bottom
+├── styles/           global.css (Tailwind + @theme tokens), carousel.css
+└── utils/
+public/               committed static assets (og image, icons, manifest)
+```
 
-    Your site is now running at http://localhost:8000!
+All user-facing copy is Czech and lives inline in the section components or in
+`src/data/` — there is no CMS or content collection.
 
-    Edit `src/pages/index.tsx` to see your site update in real-time!
+## Deployment
 
-4.  **Learn more**
-
-    - [Documentation](https://www.gatsbyjs.com/docs/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter-ts)
-    - [Tutorials](https://www.gatsbyjs.com/docs/tutorial/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter-ts)
-    - [Guides](https://www.gatsbyjs.com/docs/how-to/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter-ts)
-    - [API Reference](https://www.gatsbyjs.com/docs/api-reference/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter-ts)
-    - [Plugin Library](https://www.gatsbyjs.com/plugins?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter-ts)
-    - [Cheat Sheet](https://www.gatsbyjs.com/docs/cheat-sheet/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter-ts)
-
-## 🚀 Quick start (Netlify)
-
-Deploy this starter with one click on [Netlify](https://app.netlify.com/signup):
-
-[<img src="https://www.netlify.com/img/deploy/button.svg" alt="Deploy to Netlify" />](https://app.netlify.com/start/deploy?repository=https://github.com/gatsbyjs/gatsby-starter-minimal-ts)
+Vercel, static. `vercel.json` carries the cache and security headers; the build
+is `pnpm build` with `dist` as the output directory.

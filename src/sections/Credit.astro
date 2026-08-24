@@ -1,0 +1,24 @@
+---
+import Img from '@/components/Img.astro'
+import Link from '@/components/Link.astro'
+import Section from '@/components/Section.astro'
+import logoCce from '@/images/logo_cce.png'
+---
+
+<Section bg="bg-blue-thirdt">
+  <div class="flex gap-4 max-md:flex-col max-md:items-start md:items-center">
+    <div>
+      <Img src={logoCce} alt="Logo ČCE" height={80} />
+    </div>
+    <p class="text-left text-white">
+      Kurz je pořádán ve spolupráci s&nbsp;<Link
+        class="text-clay-first"
+        to="https://mladez.evangnet.cz/oddeleni-mladeze/">Oddělením mládeže</Link
+      >{' '}a&nbsp;<Link class="text-clay-first" to="https://mladez.evangnet.cz/com/"
+        >Celocírkevním odborem mládeže</Link
+      >{' '}<Link class="text-clay-first" to="https://e-cirkev.cz/"
+        >Českobratrské církve evangelické</Link
+      >{' '}a je součástí oficiálního církevního vzdělávání.
+    </p>
+  </div>
+</Section>

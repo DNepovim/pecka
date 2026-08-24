@@ -1,0 +1,30 @@
+---
+import { linkClassName } from '@/components/linkClasses'
+import { isLinkExternal } from '@/utils/isLinkExternal'
+
+type Props = {
+  to?: string
+  targetSelf?: boolean
+  class?: string
+}
+
+const { to, targetSelf, class: className } = Astro.props
+const isExternal = to ? isLinkExternal(to) : false
+---
+
+{
+  to ? (
+    <a
+      class:list={[linkClassName, className]}
+      href={to}
+      target={isExternal ? (targetSelf ? '_self' : '_blank') : undefined}
+      rel={isExternal && !targetSelf ? 'noreferrer noopener' : undefined}
+    >
+      <slot />
+    </a>
+  ) : (
+    <span>
+      <slot />
+    </span>
+  )
+}

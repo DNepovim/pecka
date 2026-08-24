@@ -1,0 +1,43 @@
+---
+import Img from '@/components/Img.astro'
+import Link from '@/components/Link.astro'
+import Navigation from '@/components/Navigation/Navigation.astro'
+import Section from '@/components/Section.astro'
+import svestka from '@/images/svestka.svg'
+import Layout from '@/layouts/Layout.astro'
+---
+
+<Layout title="Pecka – kurz pro pracovníky s mládeží v ČCE">
+  <Navigation />
+  <main class="bg-brand-second min-h-screen pt-10">
+    <Section
+      id="uvod"
+      class="m-0 box-border grid min-h-[90vh] items-center lg:grid-cols-2"
+    >
+      <div class="relative z-10 text-center">
+        <p class="text-xl">Stránka nenalezena</p>
+        <h1
+          class="font-head text-brand-first text-6xl leading-none font-bold tracking-[.08em]"
+        >
+          Tady nic není
+        </h1>
+        <p class="inline-block px-2 py-1">
+          Zkus jít na{' '}<Link class="text-brand-first underline" to="/"
+            >úvodní stránku</Link
+          >.
+        </p>
+      </div>
+      <div>
+        <Img
+          src={svestka}
+          alt="svestka"
+          width={650}
+          height={500}
+          widths={[150, 200, 250, 300, 350, 400, 480, 560, 960, 1120]}
+          sizes="50vw, (min-width: 40rem) calc((100vw - 2rem) / 2),(min-width: 60rem) calc((1200px - 2rem) / 2)"
+          class="max-lg:absolute max-lg:top-1/2 max-lg:left-1/2 max-lg:-translate-x-1/2 max-lg:-translate-y-1/2 max-lg:opacity-40"
+        />
+      </div>
+    </Section>
+  </main>
+</Layout>

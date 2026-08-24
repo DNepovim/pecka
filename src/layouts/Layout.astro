@@ -1,0 +1,49 @@
+---
+import MetaTags from '@/components/MetaTags.astro'
+
+import '@/styles/global.css'
+
+type Props = {
+  title: string
+  description?: string
+  image?: string
+  url?: string
+  domain?: string
+}
+
+const { title, description, image, url, domain } = Astro.props
+
+const UMAMI_WEBSITE_ID = '8f2fb2c7-5768-43fe-b81b-1eb8f20a4395'
+const UMAMI_SRC = 'https://cloud.umami.is/script.js'
+---
+
+<!doctype html>
+<html lang="cs" class="font-text">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="generator" content={Astro.generator} />
+    <MetaTags
+      title={title}
+      description={description}
+      image={image}
+      url={url}
+      domain={domain}
+    />
+    <link rel="icon" type="image/png" sizes="32x32" href="/icons/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="192x192" href="/icons/icon-192.png" />
+    <link rel="apple-touch-icon" href="/icons/apple-touch-icon.png" />
+    <link rel="manifest" href="/manifest.webmanifest" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,600;1,400;1,600&family=Amatic+SC:wght@700&display=swap"
+    />
+    <script is:inline async defer src={UMAMI_SRC} data-website-id={UMAMI_WEBSITE_ID}
+    ></script>
+  </head>
+  <body>
+    <slot />
+  </body>
+</html>

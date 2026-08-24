@@ -1,0 +1,31 @@
+---
+import H3 from '@/components/Typography/H3.astro'
+
+type Props = {
+  title: string
+  text: string
+  author: string
+  link: string
+  label?: string
+}
+
+const { title, text, author, link, label } = Astro.props
+---
+
+<article>
+  <H3 class="text-brand-first">
+    <a href={link} target="_blank" rel="noreferrer noopener">{title}</a>
+  </H3>
+  <p class="italic">{author}</p>
+  <p>{text}</p>
+  <div class="justify-self-end text-right">
+    <a
+      href={link}
+      target="_blank"
+      rel="noreferrer noopener"
+      class="text-brand-first font-bold hover:underline"
+    >
+      {label ?? 'Celý článek na webu mládeže'}{' >'}
+    </a>
+  </div>
+</article>

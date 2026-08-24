@@ -1,17 +1,11 @@
-import React from "react";
-import { Link, LinkProps } from "./Link";
+import { Link, type LinkProps } from '@/components/Link'
+import { buttonClassName } from '@/components/linkClasses'
 
-export interface ButtonProps extends LinkProps {}
-
-export const Button: React.FC<ButtonProps> = ({
-  children,
-  className,
-  ...props
-}) => (
-  <Link
-    className={`rounded-md bg-brown-first font-bold flex items-end gap-2 py-2 px-8 text-white ${className}`}
-    {...props}
-  >
+/**
+ * React counterpart of `Button.astro`, for use inside islands.
+ */
+export const Button = ({ children, className, ...props }: LinkProps) => (
+  <Link className={`${buttonClassName} ${className ?? ''}`} {...props}>
     {children}
   </Link>
-);
+)

@@ -1,0 +1,58 @@
+---
+import Img from '@/components/Img.astro'
+import Link from '@/components/Link.astro'
+import Section from '@/components/Section.astro'
+import H4 from '@/components/Typography/H4.astro'
+import P from '@/components/Typography/P.astro'
+import S from '@/components/Typography/S.astro'
+import calendar from '@/images/calendar.svg'
+---
+
+<Section
+  id="prakticke-informace"
+  title="Praktické informace"
+  titleColor="text-beige-first"
+  bg="bg-brand-first"
+  class="grid gap-8 lg:grid-cols-[1fr_2fr]"
+>
+  <Img src={calendar} alt="" width={200} class="h-36 object-contain max-lg:hidden" />
+  <div class="text-beige-first">
+    <H4>Termín a místo</H4>
+    <P>
+      26. 7. – 2. 8. 2026 – chata{' '}<Link
+        class="underline hover:no-underline"
+        to="https://drevomorka.skauting.cz">Dřevomorka</Link
+      >{' '}v&nbsp;Lužických horách.
+    </P>
+    <H4>Pro koho</H4>
+    <P>
+      Především pro lidi, kteří jsou na startu aktivní práce s mládeží v ČCE. Tedy pro
+      SOMáky, vedoucí sborových mládeží či letních táborů, nebo pro ty, kteří po podobné
+      službě pokukují a potřebují si dodat odvahy.
+      <br />
+      Cílíme spíš na mladší lidi (do 25 let). Staršími a zkušenějšími lidmi budeme doplňovat
+      skupinu, pokud nebude dostatek zájemců. Přihlásit se tedy má smysl.
+    </P>
+    <H4>Cena</H4>
+    <P>
+      <S>1000,-</S>
+      <br />(<Link to="https://www.semcr.cz">SEM</Link> za své členy celou částku hradí)
+    </P>
+    <H4>Podmínky účasti</H4>
+    <ul>
+      <li>Věk alepsoň 15 let v době konání kurzu.</li>
+      <li>Účast na celé délce kurzu.</li>
+    </ul>
+    <P>
+      Pokud některou podmínku nemůžeš splnit, ale o účast stojíš, napiš nám na{' '}<Link
+        to="mailto:budeto@kurzpecka.cz">budeto@kurzpecka.cz</Link
+      > a uvidíme, co se s tím dá dělat.
+    </P>
+    <H4>Přihlašování</H4>
+    <P>
+      Přihlásit se můžeš do 20. 4. 2026{' '}<Link
+        to="https://akce.e-cirkev.cz/register/204">zde</Link
+      >.{' '}
+    </P>
+  </div>
+</Section>

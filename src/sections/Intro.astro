@@ -1,0 +1,66 @@
+---
+import Img from '@/components/Img.astro'
+import Section from '@/components/Section.astro'
+import background from '@/images/30.jpg'
+import visen from '@/images/visen.png'
+---
+
+<Section
+  id="uvod"
+  class="box-border grid min-h-[calc(100vh-10rem)] items-center lg:grid-cols-2"
+  bg="bg-brand-second"
+>
+  <div class="relative z-10 flex flex-col items-center gap-4 text-center">
+    <p class="text-xl">Kurz pro pracovníky s mládeží v ČCE</p>
+    <h1
+      class="font-head text-brand-first text-[45vw] leading-none font-bold tracking-[.08em] md:text-[14em]"
+    >
+      Pecka
+    </h1>
+    <p class="mb-0 inline-block px-2 pt-1 text-sm">
+      <span class="bg-yellow-second rounded-md text-xl font-semibold">
+        Višňový ročník je za námi.
+      </span>
+    </p>
+    <p class="font-italic inline-block max-w-80 px-2 py-1 text-xs">
+      Připravujme další na léto 2027
+    </p>
+    <p class="font-italic inline-block max-w-80 px-2 py-1 text-xs">
+      Sleduj{' '}
+      <a
+        class="underline hover:no-underline"
+        href="https://mladez.evangnet.cz"
+        target="_blank"
+        rel="noreferrer noopener">web</a
+      >, nebo{' '}
+      <a
+        class="underline hover:no-underline"
+        href="https://www.facebook.com/evangelickamladez"
+        target="_blank"
+        rel="noreferrer noopener">facebook</a
+      >{' '}evangelické mládeže.
+    </p>
+  </div>
+  <Img
+    src={background}
+    alt=""
+    width={2000}
+    height={2000}
+    fit="cover"
+    widths={[400, 480, 560, 960, 1120, 1500, 2000]}
+    sizes="100vw"
+    loading="eager"
+    class="absolute inset-0 h-full w-full object-cover opacity-40"
+  />
+  <Img
+    src={visen}
+    alt="svestka"
+    width={1000}
+    height={1000}
+    fit="contain"
+    widths={[150, 200, 250, 300, 350, 400, 480, 560, 960, 1120]}
+    sizes="50vw, (min-width: 40rem) calc((100vw - 2rem) / 2),(min-width: 60rem) calc((1200px - 2rem) / 2)"
+    loading="eager"
+    class="object-contain select-none max-lg:absolute max-lg:top-1/2 max-lg:left-1/2 max-lg:-translate-x-1/2 max-lg:-translate-y-1/2 max-lg:opacity-40"
+  />
+</Section>

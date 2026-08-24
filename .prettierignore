@@ -1,0 +1,6 @@
+**/*.svg
+dist
+.astro
+.vercel
+.baseline
+pnpm-lock.yaml

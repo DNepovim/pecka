@@ -1,0 +1,21 @@
+---
+import H2 from '@/components/Typography/H2.astro'
+
+type Props = {
+  id?: string
+  class?: string
+  title?: string
+  titleColor?: string
+  bg?: string
+  full?: boolean
+}
+
+const { id, class: className, title, titleColor, bg, full } = Astro.props
+---
+
+<section id={id} class:list={['relative py-8', bg]}>
+  {title && <H2 color={titleColor}>{title}</H2>}
+  <div class:list={[!full && 'container', className]}>
+    <slot />
+  </div>
+</section>

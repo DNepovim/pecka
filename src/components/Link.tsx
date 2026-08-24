@@ -1,37 +1,33 @@
-import React, { ReactNode } from "react"
-import { isLinkExternal } from "../utils/isLinkExternal"
-import { Link as GatsbyLink } from "gatsby"
+import type { ReactNode } from 'react'
 
-export interface LinkProps {
+import { linkClassName } from '@/components/linkClasses'
+import { isLinkExternal } from '@/utils/isLinkExternal'
+
+export type LinkProps = {
   to?: string
   targetSelf?: boolean
   className?: string
   children?: ReactNode
 }
 
-const defaultClassName = "underline hover:no-underline"
+/**
+ * React counterpart of `Link.astro`, for use inside islands.
+ */
+export const Link = ({ to, targetSelf, className, children }: LinkProps) => {
+  if (!to) {
+    return <span>{children}</span>
+  }
 
-export const Link: React.FC<LinkProps> = ({
-  to,
-  targetSelf,
-  className,
-  children,
-}) =>
-  to ? (
-    isLinkExternal(to) ? (
-      <a
-        className={`${defaultClassName} ${className}`}
-        href={to}
-        target={targetSelf ? "_self" : "_blank"}
-        rel={targetSelf ? "" : "noreferrer noopener"}
-      >
-        {children}
-      </a>
-    ) : (
-      <GatsbyLink className={`${defaultClassName} ${className}`} to={to}>
-        {children}
-      </GatsbyLink>
-    )
-  ) : (
-    <span>{children}</span>
+  const isExternal = isLinkExternal(to)
+
+  return (
+    <a
+      className={`${linkClassName} ${className ?? ''}`}
+      href={to}
+      target={isExternal ? (targetSelf ? '_self' : '_blank') : undefined}
+      rel={isExternal && !targetSelf ? 'noreferrer noopener' : undefined}
+    >
+      {children}
+    </a>
   )
+}

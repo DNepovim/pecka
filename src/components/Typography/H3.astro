@@ -1,0 +1,11 @@
+---
+import { h3ClassName } from '@/components/typographyClasses'
+
+type Props = {
+  class?: string
+}
+
+const { class: className } = Astro.props
+---
+
+<h3 class:list={[h3ClassName, className]}><slot /></h3>

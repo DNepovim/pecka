@@ -1,0 +1,31 @@
+---
+import { Carousel } from '@/components/Carousel/Carousel'
+import Section from '@/components/Section.astro'
+import { members } from '@/data/members'
+import { toCarouselImage } from '@/utils/toCarouselImage'
+
+const items = await Promise.all(
+  members.map(async ({ image, name, fullName, text }) => ({
+    name,
+    fullName,
+    text,
+    image: await toCarouselImage({
+      src: image,
+      alt: '',
+      width: 200,
+      height: 200,
+      className: 'float-left mr-4 mb-4 rounded-full object-cover shape-outside',
+    }),
+  })),
+)
+---
+
+<Section
+  id="tym"
+  title="Kdo za tím stojí?"
+  titleColor="text-blue-second"
+  bg="bg-beige-first"
+  full
+>
+  <Carousel items={items} indicatorsVerticalPosition="top" client:visible />
+</Section>

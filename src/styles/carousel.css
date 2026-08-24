@@ -1,0 +1,119 @@
+/*
+ * Styling for `react-responsive-carousel`. The library's own stylesheet is
+ * deliberately not imported — everything the carousel needs lives here.
+ *
+ * `--indicator-offset` is set inline by `Carousel.tsx` from the measured
+ * position of the active indicator, so the active name stays centred.
+ */
+
+.pecka-carousel {
+  padding: 2rem 0 1rem;
+}
+
+.pecka-carousel .carousel {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+.pecka-carousel--indicators-top .carousel {
+  padding-top: 80px;
+}
+
+.pecka-carousel--indicators-bottom .carousel {
+  padding-bottom: 80px;
+}
+
+.pecka-carousel .carousel .slider {
+  display: flex;
+  max-width: 34rem;
+  margin: 0 auto;
+  padding: 0;
+  list-style: none;
+  transition: all 600ms cubic-bezier(0.1, 0.15, 0, 0.97);
+}
+
+.pecka-carousel .carousel .slide {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding: 0 1rem;
+  min-width: 100%;
+  margin: 0;
+  position: relative;
+  text-align: center;
+  transform: scale(1);
+  transition:
+    opacity 600ms cubic-bezier(0.1, 0.15, 0, 0.97),
+    transform 600ms cubic-bezier(0.1, 0.15, 0, 0.97);
+}
+
+.pecka-carousel .carousel .slide:not(.selected) {
+  opacity: 0.4;
+  transform: scale(0.7);
+}
+
+.pecka-carousel .carousel .control-dots {
+  position: absolute;
+  left: var(--indicator-offset, 0px);
+  padding: 0;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  list-style: none;
+  margin: 16px 0;
+  height: 18px;
+  transition: left 600ms cubic-bezier(0.1, 0.15, 0, 0.97);
+}
+
+.pecka-carousel--indicators-top .carousel .control-dots {
+  top: 0;
+}
+
+.pecka-carousel--indicators-bottom .carousel .control-dots {
+  bottom: 0;
+}
+
+.pecka-carousel .carousel .control-dots .dot {
+  background: #62226a;
+  border-radius: 50%;
+  width: 12px;
+  height: 12px;
+  cursor: pointer;
+  transition:
+    background-color 600ms,
+    height 600ms,
+    width 600ms;
+}
+
+.pecka-carousel .carousel .control-dots .dot.selected {
+  background-color: #e8dd2f;
+  width: 18px;
+  height: 18px;
+}
+
+.pecka-carousel .carousel .control-dots .dot:hover {
+  background-color: #e8dd2f;
+}
+
+.pecka-carousel .carousel .control-disabled {
+  display: none;
+}
+
+.pecka-carousel-name {
+  font-weight: bold;
+  cursor: pointer;
+  user-select: none;
+  justify-self: flex-end;
+  color: #052f32;
+  font-size: 1rem;
+  transition: font-size 600ms cubic-bezier(0.1, 0.15, 0, 0.97);
+}
+
+.pecka-carousel-name[data-selected='true'] {
+  color: #62226a;
+  font-size: 1.4rem;
+}

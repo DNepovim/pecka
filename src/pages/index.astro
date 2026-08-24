@@ -1,0 +1,40 @@
+---
+import Navigation from '@/components/Navigation/Navigation.astro'
+import Layout from '@/layouts/Layout.astro'
+import Claim from '@/sections/Claim.astro'
+import Contact from '@/sections/Contact.astro'
+import Credit from '@/sections/Credit.astro'
+import How from '@/sections/How.astro'
+import Informations from '@/sections/Informations.astro'
+import Intro from '@/sections/Intro.astro'
+import Pillars from '@/sections/Pillars.astro'
+import Team from '@/sections/Team.astro'
+import What from '@/sections/What.astro'
+import Why from '@/sections/Why.astro'
+
+const title = '🍒 Pracuješ s mládeží v církvi? Tak tohle je akce pro tebe! '
+const description =
+  'Pecka je kurz pro pracovníky s mládeží, který tě vybaví zkušenostmi, zážitky a partou skvělých lidí.'
+---
+
+<Layout
+  title={title}
+  description={description}
+  image="/images/og.jpg"
+  url="https://www.kurzpecka.cz/"
+  domain="kurzpecka.cz"
+>
+  <Navigation />
+  <main class="bg-brand-second pt-10">
+    <Intro />
+    <Claim />
+    <Credit />
+    <Pillars />
+    <How />
+    <Why />
+    <What />
+    <Team />
+    <Informations />
+    <Contact />
+  </main>
+</Layout>
