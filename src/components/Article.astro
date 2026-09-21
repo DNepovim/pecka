@@ -13,7 +13,7 @@ const { title, text, author, link, label } = Astro.props
 ---
 
 <article>
-  <H3 class="text-brand-first">
+  <H3 class="text-season-first">
     <a href={link} target="_blank" rel="noreferrer noopener">{title}</a>
   </H3>
   <p class="italic">{author}</p>
@@ -23,7 +23,7 @@ const { title, text, author, link, label } = Astro.props
       href={link}
       target="_blank"
       rel="noreferrer noopener"
-      class="text-brand-first font-bold hover:underline"
+      class="text-season-first font-bold hover:underline"
     >
       {label ?? 'Celý článek na webu mládeže'}{' >'}
     </a>

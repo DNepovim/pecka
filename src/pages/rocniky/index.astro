@@ -1,0 +1,28 @@
+---
+import { getCollection } from 'astro:content'
+
+import Navigation from '@/components/Navigation/Navigation.astro'
+import SeasonBowl from '@/components/SeasonBowl.astro'
+import Section from '@/components/Section.astro'
+import Layout from '@/layouts/Layout.astro'
+
+const seasons = await getCollection('seasons')
+---
+
+<Layout
+  title="Ročníky Pecky"
+  description="Každý ročník Pecky nese jméno po ovoci. Podívej se, jaké byly předchozí Pecky."
+  url="https://www.kurzpecka.cz/rocniky"
+  domain="kurzpecka.cz"
+>
+  <Navigation currentPath="/rocniky" />
+  <main class="bg-brand-second min-h-screen pt-10">
+    <Section title="Ročníky" titleColor="text-brand-first" full>
+      <p class="mx-auto mb-2 max-w-2xl px-4 text-center font-bold italic">
+        Každý ročník Pecky nese jméno po ovoci. Vyber si jedno z mísy a podívej se, jaký
+        byl.
+      </p>
+      <SeasonBowl seasons={seasons} />
+    </Section>
+  </main>
+</Layout>

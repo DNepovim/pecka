@@ -1,0 +1,215 @@
+---
+import type { CollectionEntry } from 'astro:content'
+
+import Img from '@/components/Img.astro'
+
+type Props = {
+  seasons: CollectionEntry<'seasons'>[]
+}
+
+const { seasons } = Astro.props
+
+/*
+ * The fruit are piled in the bowl: spread left to right in chronological order,
+ * with the middle of the spread sitting at the front of the heap — lower, a
+ * little bigger and on top — and the outer ones further back, higher up the
+ * curve of the bowl.
+ *
+ * Front-most must also be top-most. Each fruit is a rectangular link box far
+ * wider than the artwork inside it, so a fruit layered underneath its
+ * neighbours would have its whole hit area covered by their transparent
+ * corners and become unclickable.
+ *
+ * Layering, back to front: the inside of the bowl, the fruit (z 5–15, whichever
+ * is hovered lifts to 20), then the front wall at z 30, which hides the bottom
+ * of every fruit so they look like they are sitting in it.
+ */
+const chronological = [...seasons].sort((a, b) => a.data.order - b.data.order)
+
+const fruit = chronological.map((season, index) => {
+  const t = chronological.length === 1 ? 0.5 : index / (chronological.length - 1)
+  const depth = Math.sin(t * Math.PI)
+
+  return {
+    season,
+    /*
+     * The rim sits at 190 of the 300-unit viewBox and its front edge dips to
+     * ~214 in the middle, i.e. between 29% and 32% up from the bottom. Anything
+     * above that line would perch on the rim instead of sitting in the bowl, so
+     * every fruit is anchored well below it.
+     */
+    left: 50 + (t - 0.5) * 46,
+    bottom: 20 - depth * 4,
+    width: 30 + depth * 3,
+    zIndex: 5 + Math.round(depth * 10),
+    /*
+     * The fruit drop in left to right, tilting alternately so the heap does
+     * not land in lockstep.
+     */
+    delay: index * 0.12,
+    tilt: index % 2 === 0 ? -8 : 8,
+  }
+})
+---
+
+<!--
+  The bowl sits in the bottom two thirds of its square-ish box, so the top of
+  the box is air above the fruit. The negative margin — a share of the width,
+  which is what everything inside scales with — crops most of it away and
+  brings the heap up to the heading.
+-->
+<div class="mx-auto -mt-[14%] w-full max-w-4xl px-4">
+  <div class="relative aspect-4/3 w-full">
+    <svg
+      viewBox="0 0 400 300"
+      class="absolute inset-0 h-full w-full"
+      aria-hidden="true"
+      focusable="false"
+    >
+      <ellipse
+        cx="200"
+        cy="190"
+        rx="155"
+        ry="24"
+        fill="#b0847a"
+        stroke="#7b492e"
+        stroke-width="4"></ellipse>
+    </svg>
+
+    {
+      fruit.map(({ season, left, bottom, width, zIndex, delay, tilt }) => (
+        <a
+          href={`/rocniky/${season.id}`}
+          data-season-fruit
+          class="group absolute -translate-x-1/2 transition-transform duration-300 hover:z-20 hover:-translate-y-3 focus-visible:z-20 focus-visible:-translate-y-3 data-revealed:z-20 data-revealed:-translate-y-3"
+          style={`left: ${left}%; bottom: ${bottom}%; width: ${width}%; z-index: ${zIndex}; --drop-delay: ${delay}s; --drop-tilt: ${tilt}deg; --season-first: ${season.data.colors.first}; --season-second: ${season.data.colors.second}`}
+        >
+          <span class="border-season-first/25 bg-season-second text-season-first font-head pointer-events-none absolute bottom-full left-1/2 mb-3 w-max max-w-[9rem] -translate-x-1/2 rounded-md border px-3 py-1 text-center text-[1.5em] leading-tight font-bold opacity-0 transition-opacity duration-300 group-hover:opacity-100 group-focus-visible:opacity-100 group-data-revealed:opacity-100">
+            {season.data.title}
+            <span class="block text-[0.5em] tracking-widest">{season.data.years}</span>
+          </span>
+          <Img
+            src={season.data.logo}
+            alt={`${season.data.title} ročník ${season.data.years}`}
+            width={420}
+            loading="eager"
+            class="w-full origin-bottom transition-transform duration-300 group-hover:scale-105 group-focus-visible:scale-105 group-data-revealed:scale-105"
+          />
+        </a>
+      ))
+    }
+
+    <svg
+      viewBox="0 0 400 300"
+      class="pointer-events-none absolute inset-0 z-30 h-full w-full"
+      aria-hidden="true"
+      focusable="false"
+    >
+      <path
+        d="M45 190 C50 253 120 291 200 291 C280 291 350 253 355 190 A155 24 0 0 1 45 190 Z"
+        fill="#c8968a"
+        stroke="#7b492e"
+        stroke-width="4"
+        stroke-linejoin="round"></path>
+    </svg>
+  </div>
+</div>
+
+<style>
+  /*
+   * On load each fruit appears a short way above the bowl — the offset is a
+   * share of its own height — and drops in with a short bounce. `backwards`
+   * keeps it out of sight until its turn, and once the animation is over the
+   * offset goes back to the hover classes.
+   *
+   * Tailwind centres the fruit with the `translate` property rather than
+   * `transform`, so the keyframes have to animate `translate` too — animating
+   * `transform` would stack a second -50% on top of it for the length of the
+   * fall and drop the fruit half a width off to the side.
+   */
+  [data-season-fruit] {
+    animation: fruit-drop 0.6s var(--drop-delay) backwards;
+  }
+
+  @keyframes fruit-drop {
+    0% {
+      opacity: 0;
+      translate: -50% -45%;
+      rotate: var(--drop-tilt);
+      animation-timing-function: cubic-bezier(0.55, 0.06, 0.68, 0.19);
+    }
+    20% {
+      opacity: 1;
+    }
+    55% {
+      opacity: 1;
+      translate: -50% 0;
+      rotate: 0deg;
+      animation-timing-function: ease-out;
+    }
+    72% {
+      translate: -50% -7%;
+    }
+    86% {
+      translate: -50% 0;
+    }
+    94% {
+      translate: -50% -2%;
+    }
+    100% {
+      translate: -50% 0;
+      rotate: 0deg;
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    [data-season-fruit] {
+      animation: none;
+    }
+  }
+</style>
+
+<script>
+  /*
+   * A pointer that can hover reveals a fruit's name before any click, so the
+   * click can go straight through. A touch cannot, so the first tap only
+   * reveals the name — standing in for the hover — and the second one follows
+   * the link.
+   */
+  const fruit = document.querySelectorAll('[data-season-fruit]')
+
+  let lastPointerType: string | null = null
+
+  const reveal = (tapped: Element | null) => {
+    fruit.forEach((item) => {
+      if (item !== tapped) {
+        item.removeAttribute('data-revealed')
+      }
+    })
+  }
+
+  document.addEventListener(
+    'pointerdown',
+    (event) => {
+      lastPointerType = event.pointerType
+      reveal((event.target as Element | null)?.closest('[data-season-fruit]') ?? null)
+    },
+    true,
+  )
+
+  // Keyboard activation is preceded by focus, which reveals the name already.
+  document.addEventListener('keydown', () => (lastPointerType = null), true)
+
+  fruit.forEach((link) => {
+    link.addEventListener('click', (event) => {
+      if (lastPointerType === null || lastPointerType === 'mouse') {
+        return
+      }
+      if (link.hasAttribute('data-revealed')) {
+        return
+      }
+      event.preventDefault()
+      link.setAttribute('data-revealed', '')
+    })
+  })
+</script>

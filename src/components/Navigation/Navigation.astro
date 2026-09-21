@@ -5,6 +5,13 @@ import { Navigation } from '@/components/Navigation/Navigation'
 import { navItems } from '@/data/navItems'
 import visen from '@/images/visen.png'
 
+type Props = {
+  /** Set on pages other than the home page, to highlight their own nav item. */
+  currentPath?: string
+}
+
+const { currentPath } = Astro.props
+
 const logoHeight = 25
 const logoWidth = Math.round((visen.width / visen.height) * logoHeight)
 const logoImage = await getImage({ src: visen, height: logoHeight, width: logoWidth })
@@ -13,5 +20,6 @@ const logoImage = await getImage({ src: visen, height: logoHeight, width: logoWi
 <Navigation
   items={navItems}
   logo={{ src: logoImage.src, width: logoWidth, height: logoHeight }}
+  currentPath={currentPath}
   client:load
 />

@@ -9,4 +9,5 @@ export const navItems: NavigationItem[] = [
   { title: 'Tým', link: '/#tym' },
   { title: 'Informace', link: '/#prakticke-informace' },
   { title: 'Kontakt', link: '/#kontakt' },
+  { title: 'Ročníky', link: '/rocniky' },
 ]

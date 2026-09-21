@@ -29,6 +29,18 @@
   --color-brown-first: #7b492e;
 }
 
+/*
+ * Each edition of the course repaints the site in its own two colours. The
+ * season pages set `--season-first` / `--season-second` on a wrapper element;
+ * `inline` makes the utilities emit `var(--season-first)` directly, so the
+ * value resolves per element instead of being frozen on `:root`. The fallbacks
+ * are the current edition's palette.
+ */
+@theme inline {
+  --color-season-first: var(--season-first, #9a1e38);
+  --color-season-second: var(--season-second, #ffe8ca);
+}
+
 html {
   scroll-behavior: smooth;
   font-family: Montserrat;

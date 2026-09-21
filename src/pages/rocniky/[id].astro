@@ -1,0 +1,109 @@
+---
+import { getCollection, render, type CollectionEntry } from 'astro:content'
+
+import Article from '@/components/Article.astro'
+import { Carousel } from '@/components/Carousel/Carousel'
+import { Gallery } from '@/components/Gallery'
+import Img from '@/components/Img.astro'
+import Link from '@/components/Link.astro'
+import A from '@/components/mdx/A.astro'
+import Ul from '@/components/mdx/Ul.astro'
+import Navigation from '@/components/Navigation/Navigation.astro'
+import Section from '@/components/Section.astro'
+import H2 from '@/components/Typography/H2.astro'
+import H3 from '@/components/Typography/H3.astro'
+import P from '@/components/Typography/P.astro'
+import Layout from '@/layouts/Layout.astro'
+import { toGalleryImages } from '@/utils/toGalleryImages'
+
+export const getStaticPaths = async () => {
+  const seasons = await getCollection('seasons')
+
+  return seasons.map((season) => ({
+    params: { id: season.id },
+    props: { season },
+  }))
+}
+
+type Props = {
+  season: CollectionEntry<'seasons'>
+}
+
+const { season } = Astro.props
+const { title, fruit, years, claim, logo, colors, photosUrl, testimonials, articles } =
+  season.data
+
+const { Content } = await render(season)
+const galleryImages = await toGalleryImages(season.data.gallery)
+---
+
+<Layout
+  title={`${title} ročník ${years} | Pecka`}
+  description={claim}
+  url={`https://www.kurzpecka.cz/rocniky/${season.id}`}
+  domain="kurzpecka.cz"
+>
+  <Navigation currentPath="/rocniky" />
+  <main
+    class="bg-season-second min-h-screen pt-10"
+    style={`--season-first: ${colors.first}; --season-second: ${colors.second}`}
+  >
+    <Section class="flex flex-col items-center gap-4 text-center">
+      <Img
+        src={logo}
+        alt={fruit}
+        width={420}
+        height={420}
+        fit="contain"
+        loading="eager"
+        class="h-56 w-56 object-contain"
+      />
+      <h1
+        class="font-head text-season-first text-[16vw] leading-none font-bold tracking-[.08em] md:text-[7em]"
+      >
+        {title} ročník
+      </h1>
+      <p class="text-season-first text-xl font-bold">{years}</p>
+      <p class="text-blue-second max-w-2xl italic">{claim}</p>
+    </Section>
+
+    <Section>
+      {/* The site's `.container` is unlayered, so the width cap has to sit inside it. */}
+      <div class="text-blue-second mx-auto max-w-2xl">
+        <Content components={{ p: P, h2: H2, h3: H3, a: A, ul: Ul }} />
+      </div>
+    </Section>
+
+    {
+      testimonials.length > 0 && (
+        <Section title="Co na to účastníci?" titleColor="text-season-first" full>
+          <Carousel isCenterd items={testimonials} client:visible />
+        </Section>
+      )
+    }
+
+    {
+      galleryImages.length > 0 && (
+        <Section title="Fotky" titleColor="text-season-first" full>
+          <Gallery images={galleryImages} photosUrl={photosUrl} client:visible />
+        </Section>
+      )
+    }
+
+    {
+      articles.length > 0 && (
+        <Section title="Psalo se o nás" titleColor="text-season-first" full>
+          <div class="mx-auto grid max-w-screen-2xl grid-cols-1 gap-8 px-4 md:grid-cols-2 lg:grid-cols-3">
+            {articles.map((article) => (
+              <Article {...article} />
+            ))}
+          </div>
+        </Section>
+      )
+    }
+
+    <Section class="text-center">
+      <Link class="text-season-first" to="/rocniky">Zpátky na všechny ročníky</Link>
+    </Section>
+  </main>
+</Layout>

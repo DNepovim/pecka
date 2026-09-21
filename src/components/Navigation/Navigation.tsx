@@ -15,23 +15,37 @@ type NavigationLogo = {
   height: number
 }
 
+/** Items pointing at a section of the home page, i.e. `/#uvod`. */
+const isSectionItem = (item: NavigationItem) => item.link.startsWith('/#')
+
 export const Navigation = ({
   items,
   logo,
+  currentPath,
 }: {
   items: NavigationItem[]
   logo: NavigationLogo
+  /** Set on pages that are not the home page, to highlight their own item. */
+  currentPath?: string
 }) => {
-  const [activeItem, setActiveItem] = useState<string | undefined>()
+  const [activeItem, setActiveItem] = useState<string | undefined>(
+    currentPath ? items.find((item) => item.link === currentPath)?.link : undefined,
+  )
   const scrollPosition = useScrollPosition()
   const onScrollHandler = useCallback(
     (scrollPossition: number) => {
+      // Away from the home page there are no sections to spy on, and the
+      // current page's item stays highlighted.
+      if (currentPath) {
+        return
+      }
+      const sectionItems = items.filter(isSectionItem)
       if (document.body.scrollHeight - (scrollPossition + window.innerHeight) < 100) {
-        setActiveItem(items[items.length - 1]?.link)
+        setActiveItem(sectionItems[sectionItems.length - 1]?.link)
         return
       }
       setActiveItem(
-        items.slice(0, -1).reduce<string | undefined>((acc, item) => {
+        sectionItems.slice(0, -1).reduce<string | undefined>((acc, item) => {
           const block = document.getElementById(item.link.substring(2))
           if (!block) {
             return
@@ -41,7 +55,7 @@ export const Navigation = ({
         }, undefined),
       )
     },
-    [items],
+    [items, currentPath],
   )
   useEffect(() => {
     onScrollHandler(scrollPosition)
@@ -52,7 +66,7 @@ export const Navigation = ({
         <div className="my-0 mr-auto ml-0 flex h-full items-center">
           <a
             className="m-0 flex text-4xl transition-opacity duration-500"
-            href="#uvod"
+            href={currentPath ? '/' : '#uvod'}
             style={{ opacity: activeItem ? 1 : 0 }}
           >
             <img

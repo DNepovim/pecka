@@ -15,22 +15,28 @@ export type GalleryImage = {
 
 type GalleryProps = {
   images: GalleryImage[]
+  /** Public album with the rest of the photos. Omit to hide the buttons. */
+  photosUrl?: string
 }
 
-const GALLERY_URL = 'https://photos.app.goo.gl/gchMvMbpWfhcqud56'
-
-const getImageClasses = (index: number, isOpened: boolean): string => {
+const getImageClasses = (index: number, total: number, isOpened: boolean): string => {
   const classes: string[] = []
 
-  // Grid span classes based on position
-  if (index === 0) {
-    classes.push('md:col-span-2 md:row-span-2')
-  } else if (index === 4) {
-    classes.push('md:row-span-2')
-  } else if (index === 8) {
-    classes.push('md:col-span-2')
-  } else if (index === 17) {
-    classes.push('md:col-span-2 md:row-span-2')
+  /*
+   * Grid span classes based on position. A span only works when enough tiles
+   * follow it to fill the rows it stretches into — on a short gallery the
+   * stretched tile ends up alone in the last row with a hole beside it.
+   */
+  if (total - index > 4) {
+    if (index === 0) {
+      classes.push('md:col-span-2 md:row-span-2')
+    } else if (index === 4) {
+      classes.push('md:row-span-2')
+    } else if (index === 8) {
+      classes.push('md:col-span-2')
+    } else if (index === 17) {
+      classes.push('md:col-span-2 md:row-span-2')
+    }
   }
 
   // Hidden on mobile when gallery is closed (images after index 4, except index 8)
@@ -41,7 +47,7 @@ const getImageClasses = (index: number, isOpened: boolean): string => {
   return classes.join(' ')
 }
 
-export const Gallery = ({ images }: GalleryProps) => {
+export const Gallery = ({ images, photosUrl }: GalleryProps) => {
   const [isOpened, setIsOpened] = useState(false)
   const [lightboxIndex, setLightboxIndex] = useState(-1)
 
@@ -50,7 +56,7 @@ export const Gallery = ({ images }: GalleryProps) => {
       {images.map((image, index) => (
         <div
           key={image.src}
-          className={`sm:cursor-pointer ${getImageClasses(index, isOpened)}`}
+          className={`sm:cursor-pointer ${getImageClasses(index, images.length, isOpened)}`}
           onClick={() => {
             if (window.innerWidth >= 640) {
               setLightboxIndex(index)
@@ -83,12 +89,16 @@ export const Gallery = ({ images }: GalleryProps) => {
         >
           Další fotky
         </button>
-        <Button to={GALLERY_URL} className="max-md:hidden">
-          Více fotek
-        </Button>
-        <Button to={GALLERY_URL} className={isOpened ? 'md:hidden' : 'hidden'}>
-          Ještě více fotek
-        </Button>
+        {photosUrl && (
+          <>
+            <Button to={photosUrl} className="max-md:hidden">
+              Více fotek
+            </Button>
+            <Button to={photosUrl} className={isOpened ? 'md:hidden' : 'hidden'}>
+              Ještě více fotek
+            </Button>
+          </>
+        )}
       </div>
 
       <Lightbox

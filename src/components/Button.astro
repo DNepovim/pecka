@@ -1,0 +1,16 @@
+---
+import Link from '@/components/Link.astro'
+import { buttonClassName } from '@/components/linkClasses'
+
+type Props = {
+  to?: string
+  targetSelf?: boolean
+  class?: string
+}
+
+const { to, targetSelf, class: className } = Astro.props
+---
+
+<Link to={to} targetSelf={targetSelf} class:list={[buttonClassName, className]}>
+  <slot />
+</Link>
