@@ -1,5 +1,5 @@
 import useScrollPosition from '@react-hook/window-scroll'
-import { useEffect, useRef, useState } from 'react'
+import { useCallback, useEffect, useRef, useState } from 'react'
 
 import type { NavigationItem } from '@/components/Navigation/Navigation'
 
@@ -38,7 +38,7 @@ export const DesktopNavigation = ({
 
   const fallbackedActiveItem = activeItem ?? items[0]?.link
 
-  useEffect(() => {
+  const measureUnderline = useCallback(() => {
     if (!navListRef.current || !fallbackedActiveItem) {
       return
     }
@@ -46,9 +46,23 @@ export const DesktopNavigation = ({
       `a[href$='${fallbackedActiveItem}']`,
     )
     setActiveItemCor(getUnderlineCor(navListRef.current, activeNavItem))
+  }, [fallbackedActiveItem])
+
+  useEffect(() => {
+    measureUnderline()
     // Intentionally keyed on scroll only, matching the pre-Astro behaviour:
     // the underline follows scrolling, it does not chase `activeItem` on its own.
   }, [scrollPosition])
+
+  /*
+   * The web font arrives after hydration and re-flows the list, which leaves
+   * the first measurement pointing at where the item used to be. Away from the
+   * home page nothing scrolls the underline back into place, so measure again
+   * once the font is in.
+   */
+  useEffect(() => {
+    void document.fonts.ready.then(measureUnderline)
+  }, [measureUnderline])
 
   return (
     <ul className="align-center relative -mx-2 flex" ref={navListRef}>
